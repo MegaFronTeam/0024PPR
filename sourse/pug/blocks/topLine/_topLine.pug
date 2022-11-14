@@ -1,0 +1,57 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container-lg
+			+b.menu
+				.swiper.menu-slide-js
+					ul.swiper-wrapper
+						+topLineSlide('Услуги')
+						+topLineSlide('Выполненые проекты')
+						+topLineSlide('Калькулятор')
+						+topLineSlide('Отзывы')
+						+topLineSlide('Сертификаты')
+						+topLineSlide('Новости')
+						+topLineSlide('Контакты')
+	+b.fixed-line--js
+		.container-lg
+			+e.row.row.align-items-center.gy-3
+				//-.col-auto.d-lg-none
+					+e.burger(class="toggle-menu-mobile--js")
+						span
+				.col.d-lg-none
+					+e.logo(href='/')
+						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
+						span С-проджект
+				.col-lg.order-lg-0.order-last
+					+b.menu
+						.swiper.menu-slide-js
+							ul.swiper-wrapper
+								+topLineSlide('Услуги', '#sOpen')
+								+topLineSlide('Выполненые проекты')
+								+topLineSlide('Калькулятор')
+								+topLineSlide('Отзывы')
+								+topLineSlide('Сертификаты')
+								+topLineSlide('Новости')
+								+topLineSlide('Контакты')
+				+e.mail-col.col-auto.text-end
+					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
+					div
+						+e.tell(href="telto:+74959713971") +7 (495) 971-39-71
+				.col-auto.d-lg-none
+					.row.gx-1
+						//-.col-auto
+							+e.wa-btn(href="#")
+								img(loading="lazy" src="img/svg/tell-blue.svg" alt="")
+						.col-auto
+							+e.wa-btn(href="#")
+								img(loading="lazy" src="img/svg/wa2.svg" alt="")
+				.col-auto.d-none.d-lg-block
+					//-+e.callback-btn(href="#") Обратный звонок
+					+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
+
+	// end topLine
+
+mixin topLineSlide(txt, href="#")
+	li.swiper-slide
+		//-+e.item(href=href)=txt
+		a(href=href)=txt

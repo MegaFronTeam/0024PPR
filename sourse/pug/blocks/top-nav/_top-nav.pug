@@ -1,0 +1,120 @@
+mixin mob-mnu()
+	+b.menu-mobile--js.d-lg-none
+		+e.inner
+			+e.top-row.row.align-items-center
+				.col
+					+b.toggle-menu-mobile--js
+						span
+				.col-auto
+					+e.logo(href="/")
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col.text-end
+					+e.wa-btn.ms-auto(href="#")
+						img(loading="lazy" src="img/svg/wa.svg" alt="")
+			UL.menu
+				li: a(href="#") Услуги
+				li: a(href="#") Выполненые проекты
+				li: a(href="#") Калькулятор
+				li: a(href="#") Отзывы
+				li: a(href="#") Сертификаты
+				li: a(href="#") Новости
+				li: a(href="#") Контакты
+			+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
+			+e.tell-row.row.justify-content-between
+				.col-auto
+					+e.link--mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
+				.col-auto
+					+e.link--tell(href="telto:+74959713971") +7 (495) 971-39-71
+			+e.footer
+				+g.top-nav
+					+e.since-row.row
+						.col-auto
+							+e.flag 4,8
+						.col
+							+e.stars
+								-for (var i = 0; i < 5; i++)
+									+icon('star')
+							+e.s-txt
+								b Работаем с 2006 года.
+								|
+								| Рейтинг на основании 180 отзывов
+	//  мобильное меню
+
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy&attributes(attributes)
+		.container-lg
+			+e.row.row.align-items-center.flex-nowrap
+				.col-auto
+					//-+e.PICTURE.logo
+						source(srcset="img/svg/logo.svg"  media="(min-width:576px)")
+						img(loading="lazy" src="img/svg/logo-sm.svg" alt="")
+					+e.logo(href='/')
+						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
+						span С-проджект
+				.col-auto.align-self-start
+					+e.since-row.row
+						.col-auto
+							+e.flag 4,8
+						.col
+							+e.stars
+								-for(var i = 0; i < 5; i++)
+									+icon('star')
+							+e.s-txt
+								b Работаем с 2006 года.
+								|
+								| Рейтинг на основании 180 отзывов
+				.col-auto.d-none.d-lg-block
+					+e.ball-row.row.scroll-link(href="#sContact")
+						.col-auto
+							+e.ball
+								img(loading="lazy" src=`img/svg/location.svg` alt="")
+						.col
+							+e.txt Москва, Алтуфьевское ш., д. 48, корп. 1
+				//-+topNavInfoItem('location')
+					| Москва, Алтуфьевское ш., д. 48, корп. 1
+				//- +topNavInfoItem('clock')
+				//- 	| пн–пт: 9:30–19:00
+				//- 	br
+				//- 	| сб–вс: выходной
+				.col-auto.d-none.d-lg-block
+					+e.ball-row.row(href="https://wa.me/+7(495)971-39-71")
+						.col-auto
+							+e.ball.p-2.bg-success
+								//-+icon(iconName)
+								img(loading="lazy" src=`img/whatsapp.svg` alt="").res-i
+						.col
+							+e.txt Есть вопросы?
+								br
+								|  Задайте в WhatsApp
+				.col.text-end.d-none.d-sm-block
+					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
+					div
+						+e.tell(href="telto:+74959713971") +7 (495) 971-39-71
+				.col-auto.d-none.d-md-block
+					+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
+				.col-auto.d-md-none.ms-auto
+					.row.gx-1
+						.col-auto
+							+e.wa-btn(href="#")
+								img(loading="lazy" src="img/svg/tell-blue.svg" alt="")
+						.col-auto
+							+e.wa-btn(href="#")
+								img(loading="lazy" src="img/svg/wa2.svg" alt="")
+				//-.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+				//-.col.d-none.d-lg-block
+					+mnu()
+	// end top-nav
+
+mixin topNavInfoItem(iconName)
+	.col-auto.d-none.d-lg-block
+		+e.ball-row.row
+			.col-auto
+				+e.ball
+					//-+icon(iconName)
+					img(loading="lazy" src=`img/svg/${iconName}.svg` alt="")
+			.col
+				+e.txt
+					block

@@ -1,0 +1,76 @@
+.form-wrap{
+ 	&__input-wrap{
+			// @extend .form-group;
+			
+		}
+		&__input{
+			// @extend .form-control;
+		//  outline: 0 !important;
+		 resize: none;
+ 	}
+ 	&__btn{
+ 		cursor: pointer;
+ 	}
+ 	label{
+ 		width: 100%;
+ 		display: block;
+ 	}
+}
+
+
+.parsley-error{
+	border-image: none;
+	border: 2px solid  red !important;
+	color: red;
+	outline: 0 !important;
+	 
+}
+.parsley-success{
+	border: 2px solid  #00d600 !important;
+
+}
+.parsley-errors-list{
+	color: red;
+}
+
+//
+.form-check{
+
+}
+.form-check-input{
+
+}
+.form-check-label{
+	
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0;
+	/* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.select2-container--default .select2-selection--single {
+	@extend .form-select;
+	height: auto !important;
+	padding-left: rem(10);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	padding: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	display: none;
+}
