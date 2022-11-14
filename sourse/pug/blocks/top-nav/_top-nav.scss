@@ -14,7 +14,7 @@
 	&__row{
 		--bs-gutter-x: #{rem(8)};
 		@media (min-width: 400px) {
-			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-x: #{rem(14)};
 		}
 		@include media-breakpoint-up(xl){
 			--bs-gutter-x: #{rem(20)};
@@ -35,6 +35,9 @@
 			width: rem(152);
 			margin-left: 0;
 			margin-right: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(25);
 		}
 		@include media-breakpoint-up(xl){
 			margin-right: 28px;
@@ -215,6 +218,14 @@
 			max-height: 100%;
 		}
 	}
-	&__{}
+	&__text {
+		font-size: rem(12);
+		font-weight: 500;
+		max-width: rem(206);
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
 	&__{}
 }

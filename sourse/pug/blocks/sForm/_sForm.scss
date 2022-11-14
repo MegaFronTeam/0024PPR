@@ -233,8 +233,64 @@
 			min-width: var(--btn-w);
 		}
 	}
-
-	//-
-	&__{}
-	&__{}
+	&__row {
+		--bs-gutter-y: #{rem(18)};
+	}
+	h3 {
+		font-size: rem(24);
+		margin-bottom: 0;
+		font-weight: 400;
+		max-width: rem(344);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+			margin-left: 0;
+			font-size: rem(30);
+		}
+		span {
+			text-decoration: underline;
+			color: $green3;
+		}
+	}
+	.form-wrap {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		flex-direction: column;
+		border-radius: 5px;
+		@include media-breakpoint-up(md) {
+			background-color: $gray-110;
+			flex-direction: row;
+		}
+		@include media-breakpoint-up(lg) {
+			flex-wrap: nowrap;
+		}
+		form {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			flex-direction: column;
+			@include media-breakpoint-up(md) {
+				flex-direction: row;
+			}
+		}
+		&__input-wrap {
+			width: 100%;
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
+		&__input {
+			border-color: transparent;
+		}
+		&__btn {
+			@extend .btn-green;
+			width: 100%;
+			text-transform: uppercase;
+		}
+	}
 } // end.sForm

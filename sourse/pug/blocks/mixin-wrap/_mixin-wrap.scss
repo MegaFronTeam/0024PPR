@@ -1,5 +1,5 @@
 .soc{
-	@include roww(10px, m);
+	@include roww(9px, m);
 	display: flex;
 	@include media-breakpoint-up(lg){
 		justify-content: flex-start;
@@ -18,8 +18,11 @@
 		@extend  .btn,.btn-primary;
 		border-radius: 50%;
 		padding: 0;
+		background: var(--bgColor);
+		border-color: transparent;
 		&:hover{
-			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// background: $primary;
+			box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
 

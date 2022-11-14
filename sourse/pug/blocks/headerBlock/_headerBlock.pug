@@ -5,34 +5,42 @@ mixin headerBlock()
 		+pic('headerBlock-paper.png')(class="headerBlock__paper d-none d-lg-block")
 		.container
 			+b.section-title
-				h1
-					| Разработка ППР
-					|
-					| для&#160;
-					span любого вида
-					|
-					| строительных работ
+				//- h1
+				//- 	| Разработка ППР
+				//- 	|
+				//- 	| для&#160;
+				//- 	span любого вида
+				//- 	|
+				//- 	| строительных работ
+				h1 #[strong Разработка проекта ОДД]<br>для #[span любой задачи]<br>с гарантией согласования 100%
 			+e.row.row
-				.col-6.col-md-auto.order-first.order-md-0
-					+headerBlockItem('Цены', 'от 15 000 ₽')
+				.col-sm-6.col-md-auto.order-first.order-md-0
+					+headerBlockItem('Подготовка Проектов ОДД и Схем<br>ОДД для любых объектов')
 				.col-sm-6.col-md-auto
-					+headerBlockItem('Доработки', 'без ограничений')
-				.col-6.col-md-auto.order-first.order-md-0
-					+headerBlockItem('Сроки', '2–3 дня')
-				.col-sm-6.col-md-auto
-					+headerBlockItem('Предоплата', 'Без предоплаты')
-			.text-center.text-md-start
-				+e.btn(href="#")
-					img(loading="lazy" src="img/svg/calc.svg" alt="")
-					span Рассчитать стоимость
+					+headerBlockItem('Согласование съездов с дорог, дорожных знаков, разметки, схем ОДД, сетей, лесов и др.')
+				//- .col-6.col-md-auto.order-first.order-md-0
+				//- 	+headerBlockItem('Сроки', '2–3 дня')
+				//- .col-sm-6.col-md-auto
+				//- 	+headerBlockItem('Предоплата', 'Без предоплаты')
+			+e.btn-row.row
+				.col-sm-auto
+					.text-center.text-md-start
+						+e.btn(href="#")
+							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
+							span БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+				.col-sm-auto
+					.text-center.text-md-start
+						+e.btn--blue(href="#")
+							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
+							span СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА 
 	// end headerBlock
 
-mixin headerBlockItem(gray, txt)
+mixin headerBlockItem( txt)
 	+e.item
 		+e.i-row.row.align-items-center
 			.col-auto
 				+e.ball
 					img(loading="lazy" src="img/svg/check-ball.svg" alt="")
 			.col
-				+e.gray=gray
-				+e.txt=txt
+				//- +e.gray=gray
+				+e.txt!= txt

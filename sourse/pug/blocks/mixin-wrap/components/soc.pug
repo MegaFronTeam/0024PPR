@@ -1,5 +1,5 @@
 mixin item-sos(icon, a='#')
-	+e.A.item(href= a target="_blank")
+	+e.A.item(href= a target="_blank")&attributes(attributes)
 		if block
 			block
 		else
@@ -10,8 +10,8 @@ mixin soc()
 		if block
 			block
 		else
-			+item-sos('fb')
-			+item-sos('instagram')
-			+item-sos('telegram')
+			+item-sos('whatsapp')(style="--bgColor: linear-gradient(180deg, #00E676 0%, #00A454 100%);")
+			+item-sos('telegram')(style="--bgColor: linear-gradient(180deg, #35AADA 0%, #1D91C2 100%);")
+			+item-sos('vk')(style="--bgColor: linear-gradient(180deg, #4D76A1 0%, #0E4C8D 100%);")
 
 //- /social buttons 

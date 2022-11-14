@@ -6,7 +6,13 @@ mixin footer()
 					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
 						span С-проджект
-				.col-md
+				.col-md.d-none.d-md-block
 					+e.txt Разработка и согласование проектов производственных работ для строительства
+				.col-auto
+					+soc
+				.col-auto.d-none.d-md-block
+					+e.tel(href="tel:+74959713971") +7 (495) 971-39-71
+				.col-auto.d-none.d-md-block
+					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
 				+e.policy-col.col-md-auto
 					a(href="#") Политика конфиденциальности

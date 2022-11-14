@@ -4,32 +4,40 @@ mixin sForm()
 		.container
 			+e.box-wrap
 				+e.box
-					+b.section-title.text-center.text-md-start
-						h2
-							| Заказать ППР на
-							|
-							span.typed-js(data-txt1="монолитные работы" data-txt2="кровельниe работы" data-txt3="lorem ipsum")
-					+e.search-box
-						+e.input-wrap
-							+e.INPUT.input.form-control.sForm-search-js(type="text" name="search" placeholder="Введите свой ППР в поиск")
-							+e.btn.sForm-btn-js(type="button") Найти ППР
-						+e.result-row.row.d-none.d-md-flex
-							+sFormResultItem('Найдено результатов:', '2', 'sForm-items-found')
-							//-+sFormResultItem('Категорий ППР:', '23')
-							//-+sFormResultItem('Видов ППР:', '12 834')
-						+e.head-row.row.align-items-center
-							+e.for-col.col-md.text-center.text-md-start ППР для…
-							.col-md-auto.d-none.d-md-block
-								+e.show-more(href="#")
-									+icon('reload')
-									+e.SPAN.sm-txt Показать больше
-						+e.items.ppr-items-js.text-center.text-md-start(data-price-from='от 15 000 ₽')
-							+sFormItem('электромонтажных работ')
-							+sFormItem('кровельных работ')
-						.text-center.d-md-none
-							+e.show-more(href="#")
-								+icon('reload')
-								+e.SPAN.sm-txt Показать больше
+					+e.row.row
+						.col-lg-auto
+							h3 Расчёт стоимости ОДД за 5 минут 
+								span бесплатно
+						.col
+							+form-wrap
+								+input('Номер телефона', 'tel')
+								+e.btn(type="submit") оставить заявку
+					//- +b.section-title.text-center.text-md-start
+					//- 	h2
+					//- 		| Заказать ППР на
+					//- 		|
+					//- 		span.typed-js(data-txt1="монолитные работы" data-txt2="кровельниe работы" data-txt3="lorem ipsum")
+					//- +e.search-box
+					//- 	+e.input-wrap
+					//- 		+e.INPUT.input.form-control.sForm-search-js(type="text" name="search" placeholder="Введите свой ППР в поиск")
+					//- 		+e.btn.sForm-btn-js(type="button") Найти ППР
+					//- 	+e.result-row.row.d-none.d-md-flex
+					//- 		+sFormResultItem('Найдено результатов:', '2', 'sForm-items-found')
+					//- 		//-+sFormResultItem('Категорий ППР:', '23')
+					//- 		//-+sFormResultItem('Видов ППР:', '12 834')
+					//- 	+e.head-row.row.align-items-center
+					//- 		+e.for-col.col-md.text-center.text-md-start ППР для…
+					//- 		.col-md-auto.d-none.d-md-block
+					//- 			+e.show-more(href="#")
+					//- 				+icon('reload')
+					//- 				+e.SPAN.sm-txt Показать больше
+					//- 	+e.items.ppr-items-js.text-center.text-md-start(data-price-from='от 15 000 ₽')
+					//- 		+sFormItem('электромонтажных работ')
+					//- 		+sFormItem('кровельных работ')
+					//- 	.text-center.d-md-none
+					//- 		+e.show-more(href="#")
+					//- 			+icon('reload')
+					//- 			+e.SPAN.sm-txt Показать больше
 	// end sForm
 
 mixin sFormItem(title, addClasses='')

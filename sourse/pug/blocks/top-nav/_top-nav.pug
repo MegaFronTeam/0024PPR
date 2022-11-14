@@ -12,14 +12,14 @@ mixin mob-mnu()
 					+e.wa-btn.ms-auto(href="#")
 						img(loading="lazy" src="img/svg/wa.svg" alt="")
 			UL.menu
-				li: a(href="#") Услуги
-				li: a(href="#") Выполненые проекты
-				li: a(href="#") Калькулятор
-				li: a(href="#") Отзывы
-				li: a(href="#") Сертификаты
-				li: a(href="#") Новости
+				li: a(href="#") Гарантии
+				li: a(href="#") Услуги по ОДД
+				li: a(href="#") Согласования
+				li: a(href="#") Отзывы о нас
+				li: a(href="#") Наши объекты
+				li: a(href="#") О компании
 				li: a(href="#") Контакты
-			+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
+			+e.callback-btn.link-modal-js(href="#modal-call") перезвоните мне
 			+e.tell-row.row.justify-content-between
 				.col-auto
 					+e.link--mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
@@ -45,14 +45,15 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy&attributes(attributes)
 		.container-lg
 			+e.row.row.align-items-center.flex-nowrap
-				.col-auto
+				.col-auto.d-flex.align-items-center
 					//-+e.PICTURE.logo
 						source(srcset="img/svg/logo.svg"  media="(min-width:576px)")
 						img(loading="lazy" src="img/svg/logo-sm.svg" alt="")
 					+e.logo(href='/')
 						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
 						span С-проджект
-				.col-auto.align-self-start
+					+e.text Проектирование<br>и согласование организации дорожного движения
+				.col-auto.align-self-start.d-lg-none
 					+e.since-row.row
 						.col-auto
 							+e.flag 4,8
@@ -64,7 +65,7 @@ mixin top-nav()
 								b Работаем с 2006 года.
 								|
 								| Рейтинг на основании 180 отзывов
-				.col-auto.d-none.d-lg-block
+				.col-auto.col-lg.d-none.d-lg-block
 					+e.ball-row.row.scroll-link(href="#sContact")
 						.col-auto
 							+e.ball
@@ -78,29 +79,30 @@ mixin top-nav()
 				//- 	br
 				//- 	| сб–вс: выходной
 				.col-auto.d-none.d-lg-block
-					+e.ball-row.row(href="https://wa.me/+7(495)971-39-71")
-						.col-auto
-							+e.ball.p-2.bg-success
-								//-+icon(iconName)
-								img(loading="lazy" src=`img/whatsapp.svg` alt="").res-i
-						.col
-							+e.txt Есть вопросы?
-								br
-								|  Задайте в WhatsApp
-				.col.text-end.d-none.d-sm-block
+					//- +e.ball-row.row(href="https://wa.me/+7(495)971-39-71")
+					//- 	.col-auto
+					//- 		+e.ball.p-2.bg-success
+					//- 			//-+icon(iconName)
+					//- 			img(loading="lazy" src=`img/whatsapp.svg` alt="").res-i
+					//- 	.col
+					//- 		+e.txt Есть вопросы?
+					//- 			br
+					//- 			|  Задайте в WhatsApp
+					+soc
+				.col.col-lg-auto.text-end.d-none.d-sm-block
 					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
 					div
 						+e.tell(href="telto:+74959713971") +7 (495) 971-39-71
 				.col-auto.d-none.d-md-block
 					+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
-				.col-auto.d-md-none.ms-auto
+				.col-auto.d-lg-none.ms-auto
 					.row.gx-1
 						.col-auto
 							+e.wa-btn(href="#")
-								img(loading="lazy" src="img/svg/tell-blue.svg" alt="")
+								img(loading="lazy" src="img/svg/wa-icon.svg" alt="")
 						.col-auto
 							+e.wa-btn(href="#")
-								img(loading="lazy" src="img/svg/wa2.svg" alt="")
+								img(loading="lazy" src="img/svg/tg-icon.svg" alt="")
 				//-.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

@@ -1,5 +1,6 @@
 'use strict';
-let publicPath = 'wordpress/wp-content/themes/tisma/public',
+// let publicPath = 'wordpress/wp-content/themes/tisma/public',
+let publicPath = 'public',
     sourse = 'sourse',
     destSprite = '../_sprite.scss'
 
@@ -197,8 +198,8 @@ function cleanimg() {
     return del([path + '/@*'], { force: true })
 }
 
-const path2 = `@2x/`;
-const path1 = `@1x/`;
+const path2 = `${publicPath}/img/@2x/`;
+const path1 = `${publicPath}/img/@1x/`;
 const w50 = metadata => Math.ceil(metadata.width * 0.5)
 
 function img() {
@@ -229,12 +230,10 @@ function startwatch() {
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
     watch([sourse + '/js/common.js'], { usePolling: true }, common);
-    // watch(sourse + '/img', { usePolling: true }, img);
+    watch(sourse + '/img', { usePolling: true }, img);
 }
 
 export let imgAll = series(cleanimg, img)
 export let libs = series(cleanlibs, copyLibs)
 export let sprite = series(svg, svgCopy)
-export default series(common, libs, styles, 
-    // imgAll,
-     sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styles, imgAll, sprite, pugFiles, parallel(browsersync, startwatch));

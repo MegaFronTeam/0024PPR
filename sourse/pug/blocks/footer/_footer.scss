@@ -14,8 +14,15 @@
 
 	//-
 	&__row{
-		--bs-gutter-x: #{rem(25)};
+		--bs-gutter-x: #{rem(18)};
 		--bs-gutter-y: #{rem(18)};
+		justify-content: center;
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(25)};
+		}
+		@include media-breakpoint-up(md) {
+			justify-content: flex-start;
+		}
 	}
 	&__logo{
 		display: block;
@@ -79,6 +86,24 @@
 			color: $white!important;
 		}
 	}
-	&__{}
-	&__{}
+	.soc {
+		justify-content: center;
+		@include media-breakpoint-up(md) {
+			justify-content: flex-start;
+		}
+	}
+	&__tel {
+		font-weight: 600;
+		font-size: rem(18);
+		&:not(:hover) {
+			color: #fff;
+		}
+	}
+	&__mail {
+		font-size: rem(14);
+		text-decoration: underline;
+		&:not(:hover) {
+			color: #fff;
+		}
+	}
 }

@@ -5,12 +5,12 @@ mixin topLine()
 			+b.menu
 				.swiper.menu-slide-js
 					ul.swiper-wrapper
-						+topLineSlide('Услуги')
-						+topLineSlide('Выполненые проекты')
-						+topLineSlide('Калькулятор')
-						+topLineSlide('Отзывы')
-						+topLineSlide('Сертификаты')
-						+topLineSlide('Новости')
+						+topLineSlide('Гарантии')
+						+topLineSlide('Услуги по ОДД')
+						+topLineSlide('Согласования')
+						+topLineSlide('Отзывы о нас')
+						+topLineSlide('Наши объекты')
+						+topLineSlide('О компании')
 						+topLineSlide('Контакты')
 	+b.fixed-line--js
 		.container-lg
@@ -26,12 +26,12 @@ mixin topLine()
 					+b.menu
 						.swiper.menu-slide-js
 							ul.swiper-wrapper
-								+topLineSlide('Услуги', '#sOpen')
-								+topLineSlide('Выполненые проекты')
-								+topLineSlide('Калькулятор')
-								+topLineSlide('Отзывы')
-								+topLineSlide('Сертификаты')
-								+topLineSlide('Новости')
+								+topLineSlide('Гарантии')
+								+topLineSlide('Услуги по ОДД')
+								+topLineSlide('Согласования')
+								+topLineSlide('Отзывы о нас')
+								+topLineSlide('Наши объекты')
+								+topLineSlide('О компании')
 								+topLineSlide('Контакты')
 				+e.mail-col.col-auto.text-end
 					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
@@ -47,7 +47,7 @@ mixin topLine()
 								img(loading="lazy" src="img/svg/wa2.svg" alt="")
 				.col-auto.d-none.d-lg-block
 					//-+e.callback-btn(href="#") Обратный звонок
-					+e.callback-btn.link-modal-js(href="#modal-call") Обратный звонок
+					+e.callback-btn.link-modal-js(href="#modal-call") перезвоните мне
 
 	// end topLine
 

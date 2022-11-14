@@ -1,12 +1,13 @@
 mixin sMade(data)
 	// start sMade
 	+b.SECTION.sMade.section#sMade&attributes(attributes)
-		.container
+		.container 
+			+pic('trafficlight.png').bg
+			picture.bg
+				source(type="image/webp" srcset="img/@2x/webp/trafficlight.webp")
+				img(src="img/@2x/trafficlight.png" alt="")
 			+b.section-title.text-center
-				h2
-					| Нами разработано
-					|
-					span 4800 ППР с 2006 года
+				h2 Примеры наших разработанных и&nbsp;согласованных проектов
 			+e.slider-wrap
 				.swiper.sMade-slider-js
 					.swiper-wrapper
