@@ -23,8 +23,9 @@ mixin modal()
 						+e.input-wrap--tel
 							+e.INPUT.input--tel.form-control(type="tel" placeholder="номер телефона" name="tel")
 							//-img(loading="lazy" src="img/svg/modal-tel.svg" alt="")
-						+e.btn--calc(type="submit") Рассчитать стоимость
-							//img(loading="lazy" src="img/svg/calc.svg" alt="")
+						+e.btn--calc(type="submit") 
+							img(loading="lazy" src="img/svg/calc.svg" alt="")
+							| Рассчитать стоимость
 					+e.policy
 						| Нажимая на кнопку вы соглашаетесь с
 						|
@@ -50,13 +51,13 @@ mixin modal()
 							///img(loading="lazy" src="img/svg/modal-tel.svg" alt="")
 						+e.btn--leave(type="submit")
 							span оставить заявку
-							span и получить скидку 15% на первый ППР
+							span и получить скидку 15% на первый проект ОДД
 					+e.policy
 						| Нажимая на кнопку вы соглашаетесь с
 						|
 						a(href="#") политикой конфиденциальности
 			.col-lg
-				+pic('modal-paper-2.png')(class="modal-win__paper")
+				+pic('modal-paper-1.png')(class="modal-win__paper")
 	//
 	+b.modal-win(id="modal-price" style="display: none")
 		+e.row.row.gy-4
@@ -76,7 +77,7 @@ mixin modal()
 							img(loading="lazy" src="img/svg/modal-tel.svg" alt="")
 						+e.btn--leave(type="submit")
 							span оставить заявку
-							span и получить скидку 15% на первый ППР
+							span и получить скидку 15% на первый проект ОДД
 					+e.policy
 						| Нажимая на кнопку вы соглашаетесь с
 						|

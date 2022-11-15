@@ -1,0 +1,25 @@
+mixin sCoordinate(data)
+	// start sCoordinate
+	+b.SECTION.sCoordinate.section#sCoordinate&attributes(attributes).bg-wrap
+		+img('img/sCoordinate-bg-1.png', 'bg').picture-bg
+		+e.container.container
+			img(src="img/sCoordinate-bg-2.png", alt="").bg
+			+b.section-title.text-center
+				+e.headline Согласование с гарантией, прописанной в договоре
+				h2 Мы сами согласуем ваш проект:
+			+e.slider.default-slider--js.swiper
+				.swiper-wrapper
+					mixin slide(img, title)
+						+e.slide.swiper-slide.bg-wrap
+							img(src=`img/sCoordinate-img-${img}.png`, alt="")
+							p!= title
+					+slide('1', 'Департамент транспорта Москвы')
+					+slide('2', 'Центр организации дорожного движения')
+					+slide('3', 'ГУП Мосгортранс')
+					+slide('4', 'ФСО России')
+					+slide('5', 'ГБУ Мосавтодор')
+					+slide('6', 'Федеральное дорожное агентство')
+					+slide('7', 'Органы местного управления')
+					+slide('8', 'ГИБДД')
+				.swiper-pagination
+	// end sCoordinate

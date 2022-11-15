@@ -13,6 +13,9 @@
 
 	position: relative;
 	z-index: 1;
+	.container {
+		position: relative;
+	}
 	&__bg{
 		position: absolute;
 		z-index: -2;
@@ -22,7 +25,7 @@
 
 		height: calc(100% + #{rem(84)});
 		@include media-breakpoint-up(md){
-			height: calc(100% + #{rem(145)});
+			height: calc(100% + #{rem(90)});
 		}
 
 		img{
@@ -35,14 +38,14 @@
 		position: absolute;
 		pointer-events: none;
 		z-index: -1;
-		top: rem(96);
+		top: rem(-64);
 
-		right: rem(37);
+		right: rem(-280);
 		width: 100%;
 		max-width: rem(711);
 		opacity: 0.7;
 		@include media-breakpoint-up(xl){
-			right: rem(-120);
+			// right: rem(-280);
 			// width: rem(1169);
 		}
 		@include media-breakpoint-up(xxl){
@@ -196,7 +199,10 @@
 	//-
 	&__btn-row{
 		--bs-gutter-x: #{rem(30)};
-		--bs-gutter-y: #{rem(30)};
+		--bs-gutter-y: #{rem(15)};
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-y: #{rem(30)};
+		}
 	}
 	&__{}
 }

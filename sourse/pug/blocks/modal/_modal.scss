@@ -177,6 +177,9 @@
 					background-position: center;
 					background-size: contain;
 				}
+				img {
+					margin-right: rem(12);
+				}
 			}
 
 			//-
@@ -278,6 +281,7 @@
 		@extend .btn;
 		@extend .btn-outline-dark;
 
+		--bs-btn-border-radius: 5px;
 		max-width: 100%;
 		width: rem(370);
 

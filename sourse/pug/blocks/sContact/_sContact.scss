@@ -42,11 +42,24 @@
 		@extend .has-backplate;
 		z-index: 2;
 		max-width: rem(375);
+		@include media-breakpoint-down(sm) {
+			&:before {
+				background-color: $cyan;
+				box-shadow: none
+			}
+		}
 	}
 	&__box{
 		@extend .inner-border;
 		padding: rem(35);
 
+		@include media-breakpoint-down(sm) {
+			background-color: $cyan;
+			box-shadow: none;
+			&:after {
+				border-color: transparent;
+			}
+		}
 		h2{
 			font-weight: 600;
 			color: $black;
@@ -58,6 +71,9 @@
 			@include media-breakpoint-up(sm){
 				margin-bottom: rem(30);
 			}
+			@include media-breakpoint-down(sm) {
+				color: #fff;
+			}
 		}
 	}
 	&__title{
@@ -67,6 +83,9 @@
 
 		color: $gray-720;
 		margin-bottom: rem(10);
+		@include media-breakpoint-down(sm) {
+			color: #fff;
+		}
 	}
 	&__txt{
 		display: inline-block;
@@ -76,6 +95,9 @@
 		color: $black!important;
 
 		margin-bottom: rem(25);
+		@include media-breakpoint-down(sm) {
+			color: #fff !important;
+		}
 		&:last-child{
 			margin-bottom: 0;
 		}

@@ -1,0 +1,31 @@
+mixin sWhatWeDo(data)
+	// start sWhatWeDo
+	+b.SECTION.sWhatWeDo.section#sWhatWeDo&attributes(attributes)
+		+e.container.container
+			img(src="img/parking-sign.png", alt="").img
+			+b.section-title.text-center
+				+e.headline Дополнительные услуги
+				h2 Так же 
+					span мы разрабатываем:
+			+e.slider.default-slider--js.swiper
+				.swiper-wrapper
+					mixin slide(img, title, text)
+						+e.slide.swiper-slide.bg-wrap
+							+e.img-wrap.picture-bg
+								img(src=`img/sWhatWeDo-bg-${img}.jpg`, alt="")
+							+e.title!= title
+							if text
+								p!= text
+							+e.btn.btn.btn-outline-light(href='#') Заказать
+					+slide('1', 'ПОДД', 'Проекты организации дорожного движения')
+					+slide('2', 'ПОС', 'Проекты организации строительства')
+					+slide('3', 'ППР', 'Проекты производства работ')
+					+slide('4', 'Проектирование дорог')
+					+slide('5', 'Разработка ППРк', 'Проекты производства работ кранами')
+					+slide('6', 'Обследование зданий', 'Строительных конструкций или сооружений')
+					+slide('7', 'ОАТИ', 'Оформление разрешительных документов на производство работ')
+					+slide('8', 'Разработка транспортных схем')
+				.swiper-pagination
+	// end sWhatWeDo
+
+	//- sWhatWeDo-bg-1.jpg

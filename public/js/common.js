@@ -471,12 +471,37 @@ function eventHandler() {
 			]);
 		}
 	});
-	const wow = new WOW({
-		mobile: false,
-		animateClass: 'animate__animated',
-		offset: 150
+	// const wow = new WOW({
+	// 	mobile: false,
+	// 	animateClass: 'animate__animated',
+	// 	offset: 150
+	// });
+	// wow.init();
+
+	$(".toggle-list").click(function(){
+		$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();
 	});
-	wow.init();
+	let sExampleSlider = new Swiper('.slider-examples--js', {
+		watchOverflow: true,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		pagination: {
+			el: '.slider-examples-wrap .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
+
+	let defaultSlider = new Swiper('.default-slider--js', {
+		watchOverflow: true,
+		spaceBetween: 30,
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

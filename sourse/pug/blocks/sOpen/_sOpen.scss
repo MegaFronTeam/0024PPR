@@ -3,7 +3,7 @@
 	overflow: hidden;
 	padding-top: 0;
 
-	--sPT: #{rem(80)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(73)};
 	--sTPB: #{rem(63)};
 	@include media-breakpoint-up(md){
@@ -21,10 +21,11 @@
 	&__bg{
 		position: absolute;
 		z-index: -1;
-		left: rem(15);
-		top: 0;
-		width: calc(100% + #{rem(140)});
-		max-width: 100vw;
+		left: 47%;
+		top: rem(-87);
+		// width: calc(100% + #{rem(140)});
+		// max-width: 100vw;
+		max-width: 100%;
 	}
 	.section-title{
 		@include media-breakpoint-up(xl){
@@ -71,7 +72,9 @@
 				font-style: normal;
 				color: $primary;
 			}
-
+			span {
+				color: $primary;
+			}
 			font-size: rem(32);
 			margin-bottom: rem(20);
 			@include media-breakpoint-up(sm){
@@ -83,15 +86,23 @@
 			line-height: 1.1;
 
 		}
+		&--2 {
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(xl) {
+				max-width: rem(900);
+			}
+		}
 	}
 
 	//-
 	&__cert-title{
 		font-size: rem(24);
 		margin-bottom: rem(40);
+		font-weight: 500;
 		@include media-breakpoint-up(lg){
-			font-size: rem(36);
-			margin-bottom: rem(63);
+			font-size: rem(40);
+			margin-bottom: rem(53);
 			max-width: rem(850);
 		}
 
@@ -161,5 +172,7 @@
 	//swiper-slide swiper-slide-duplicate swiper-slide-prev
 	//swiper-slide
 
-	&__{}
+	.swiper-button-hand {
+		position: absolute;
+	}
 } // end.sOpen

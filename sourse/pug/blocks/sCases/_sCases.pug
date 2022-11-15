@@ -1,0 +1,35 @@
+mixin sCases(data)
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		+e.container.container
+			img(src="img/sCases-bg-1.png", alt="").bg
+			+b.section-title.text-center
+				h3 Примеры наших согласований &laquo;под ключ&raquo;
+			+e.row.row
+				mixin item(img, num, title, text, customClass)
+					+e.item
+						img(src=`img/${img}`, alt="" class=customClass)
+						+e.title 
+							span!= num
+							!= title
+						p!= text
+				.col-lg-4
+					+item('sCases-img-1.png', '16', 'лет', 'Согласовываем проекты более 16 лет', 'img--1')
+				.col-lg-4
+					+item('sCases-img-2.png', '100', '%', 'Гарантия согласования с необходимыми службами', 'img--2')
+				.col-lg-4
+					+item('sCases-img-3.png', '142', '', 'Постоянных<br>и довольных клиента', 'img--3')
+			+e.slider.default-slider--js.swiper
+				.swiper-wrapper
+					mixin slide(img, text)
+						+e.slide.swiper-slide
+							+e.img-wrap(href=`img/sCases-slide-lg-${img}.jpg` data-fancybox=`sCases-slide-${j}`)
+								img(src=`img/sCases-slide-${img}.jpg`, alt="")
+								+e.icon-wrap
+									+icon('zoom-pl')
+							p!= text
+					-for(j = 0; j < 4; j++)
+						+slide('1', 'Согласование<br>светофора с Мосавтодор')
+				.swiper-pagination
+			+e.btn.btn-green(href='#') ПОСМОТРЕТЬ ЕЩЕ
+	// end sCases

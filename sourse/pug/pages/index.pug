@@ -12,6 +12,12 @@ include ../blocks/sStandart/_sStandart.pug
 include ../blocks/sDay/_sDay.pug
 include ../blocks/sOpen/_sOpen.pug
 include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sOrganize/_sOrganize.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sStandards/_sStandards.pug
+include ../blocks/sWhatWeDo/_sWhatWeDo.pug
+include ../blocks/sCoordinate/_sCoordinate.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -27,8 +33,18 @@ block pagecontent
 		+topLine()
 	+headerBlock()
 	+sForm()
+	+sOrganize
 	//- +sAlso()
 	+sMade()
+	+sExamples(true, true).sExamples--2
+		img(src="img/road-sign-1.png", alt="").img.img--2
+		img(src="img/road-sign-2.png", alt="").img.img--3
+	+sCases
+	+sStandards
+	+sExamples
+		img(src="img/straight-sign.png", alt="").img
+	+sWhatWeDo
+	+sCoordinate
 	//- +sCategory()
 	//- +sOrder({
 
@@ -38,16 +54,17 @@ block pagecontent
 	//- +sDay()
 	//- //remove d-none if u need another form on mob devide, css is ready
 	//- +sForm()(class="sForm--alt d-none d-sm-block")
+	+sOpen2
 	+sOpen()
-	+sFeedback()
-	//- +sOrder({
-	//- 	pencil: true,
-	//- })
-	//- 	| Бесплатная
-	//- 	|
-	//- 	span консультация и расчет
-	//- 	|
-	//- 	| цены по телефону
+	//- +sFeedback()
+	+sOrder({
+		pencil: true,
+	})
+		| Бесплатная
+		|
+		span консультация и расчет
+		|
+		| цены по телефону
 	//- //-
 	+sContact()
 	+footer()

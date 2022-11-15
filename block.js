@@ -1,14 +1,17 @@
 'use strict';
 
-const fs = require('fs')
-const path = require('path')
-const colors = require('colors')
-const readline = require('readline')
+import  fs from 'fs'
+import  colors from 'colors'
+import  readline from 'readline'
+// import { fileURLToPath } from 'url'
+import path  from 'path'
 
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 const rl = readline.createInterface(process.stdin, process.stdout);
 
 // folder with all blocks
-const BLOCKS_DIR = path.join(__dirname, 'sourse/pug/blocks');
+const BLOCKS_DIR = path.join('sourse/pug/blocks');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -21,16 +24,35 @@ const fileSources = {
 			+b.section-title.text-center
 				h2 {blockName}
 				
-			.row
+			+e.row.row
 	// end {blockName}`,
 	scss: `// start .{blockName}
 .{blockName} \{
-	
-	&__{}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
 } // end.{blockName}`
 	,
 	// js: `let {blockName}Vue = new Vue({
