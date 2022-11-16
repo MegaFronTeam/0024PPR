@@ -1,6 +1,6 @@
 mixin sOpen(data)
 	// start sOpen
-	+b.SECTION.sOpen--js.section#sOpen&attributes(attributes)
+	+b.SECTION.sOpen--js.section#sOpen.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.container.container
 			+e.bg.d-none.d-xl-block
 				img(src="img/@2x/sOpen-img.png" alt="")
@@ -27,7 +27,7 @@ mixin sOpen(data)
 	// end sOpen
 
 mixin sOpen2()
-	+b.SECTION.sOpen.section#sOpen&attributes(attributes)
+	+b.SECTION.sOpen--2.--js.section#sOpen.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.container.container
 			+b.section-title--2.text-center
 				h2 #[span Отзывы постоянных клиентов] о&nbsp;наших работах

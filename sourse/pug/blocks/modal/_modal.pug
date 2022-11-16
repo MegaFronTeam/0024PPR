@@ -5,10 +5,10 @@ mixin modal()
 			+e.col--title.col-lg-auto.text-center.text-lg-start
 				+e.title-bl
 					+e.title
-						| Рассчитайте стоимость проекта
+						| Рассчитайте стоимость проекта ОДД
 						|
 						span за 1 минуту
-					p Выберите вид ППР для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.
+					p Выберите вид ОДД для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.
 				+form-wrap
 					+e.inputs
 						input.title-js(type="hidden" value="" name="title")
@@ -57,13 +57,13 @@ mixin modal()
 						|
 						a(href="#") политикой конфиденциальности
 			.col-lg
-				+pic('modal-paper-1.png')(class="modal-win__paper")
+				+pic('modal-paper-3.png')(class="modal-win__paper")
 	//
 	+b.modal-win(id="modal-price" style="display: none")
 		+e.row.row.gy-4
 			+e.col--title.col-lg-auto.text-center.text-lg-start
 				+e.title-bl
-					+e.title Узнать стоимость такого ППР
+					+e.title Не нашли что искали?
 					p Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.
 				+form-wrap
 					input.title-js(type="hidden" value="" name="title")
@@ -83,7 +83,7 @@ mixin modal()
 						|
 						a(href="#") политикой конфиденциальности
 			.col-lg
-				+pic('modal-paper-3.png')(class="modal-win__paper ")
+				+pic('modal-paper-1.png')(class="modal-win__paper ")
 	//
 	+b.m-thanks.modal-win(id="modal-thanks" style="display: none")
 		.text-center

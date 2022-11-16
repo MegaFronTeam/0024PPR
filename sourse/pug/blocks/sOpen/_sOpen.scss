@@ -175,4 +175,7 @@
 	.swiper-button-hand {
 		position: absolute;
 	}
+	&--2 {
+		--sPT: #{rem(50)};
+	}
 } // end.sOpen

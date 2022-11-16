@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -167,7 +168,7 @@
 								</div>
 							</div>
 							<div class="col-auto d-none d-md-block">
-								<a class="top-nav__callback-btn link-modal-js" href="#modal-call">Обратный звонок
+								<a class="top-nav__callback-btn link-modal-js" href="#modal-call">перезвоните мне
 								</a>
 							</div>
 							<div class="col-auto d-lg-none ms-auto">
@@ -180,6 +181,10 @@
 										<a class="top-nav__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
 										</a>
 									</div>
+								</div>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
 						</div>
@@ -253,7 +258,7 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<section class="headerBlock section" id="headerBlock">
+			<section class="headerBlock section wow animate__animated animate__fadeIn" id="headerBlock">
 				<!-- picture-->
 				<picture class="headerBlock__bg">
 					<source type="image/webp" srcset="img/@2x/webp/headerBlock-bg.webp"/><img src="img/@2x/headerBlock-bg.jpg" alt="" loading="lazy"/>
@@ -301,13 +306,13 @@
 					<div class="headerBlock__btn-row row">
 						<div class="col-sm-auto">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn" href="#"><span>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
+								<a class="headerBlock__btn link-modal-js" href="#modal-call"><span>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
 								</a>
 							</div>
 						</div>
 						<div class="col-sm-auto">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn headerBlock__btn--blue" href="#"><span>СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА </span>
+								<a class="headerBlock__btn headerBlock__btn--blue link-modal-js" href="#modal-call"><span>СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА </span>
 								</a>
 							</div>
 						</div>
@@ -316,7 +321,7 @@
 			</section>
 			<!-- end headerBlock-->
 			<!-- start sForm-->
-			<section class="sForm section">
+			<section class="sForm section wow animate__animated animate__fadeIn">
 				<div class="container">
 					<div class="sForm__box-wrap">
 						<div class="sForm__box">
@@ -342,13 +347,13 @@
 			</section>
 			<!-- end sForm-->
 			<!-- start sOrganize-->
-			<section class="sOrganize section" id="sOrganize">
+			<section class="sOrganize section wow animate__animated animate__fadeIn" id="sOrganize">
 				<div class="sOrganize__container container"><img class="img" src="img/sOrganize-img-1.png" alt=""/>
 					<div class="section-title text-center">
 						<h3><span>Профессионально организуем</span> дорожное движение и&nbsp;получим все погласования &laquo;под ключ&raquo;:</h3>
 					</div>
 					<div class="sOrganize__row row">
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -358,7 +363,7 @@
 								<p>При прокладке<br>инженерных сетей</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -368,7 +373,7 @@
 								<p>Для АЗС и&nbsp;объектов дорожного сервиса</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -378,7 +383,7 @@
 								<p>При занятии Проезжей части при производстве работ</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -388,7 +393,7 @@
 								<p>Для жилых комплексов, производственных<br>объектов и&nbsp;частных домов</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -398,7 +403,7 @@
 								<p>При установке<br>лесов/пешеходной галереи</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-6 col-lg-4">
 							<div class="sOrganize__item">
 								<div class="sOrganize__icon-wrap">
 									<svg class="icon icon-check ">
@@ -413,7 +418,7 @@
 			</section>
 			<!-- end sOrganize-->
 			<!-- start sMade-->
-			<section class="sMade section" id="sMade">
+			<section class="sMade section wow animate__animated animate__fadeIn" id="sMade">
 				<div class="container"> 
 					<!-- picture-->
 					<picture class="bg">
@@ -434,7 +439,7 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-0">
 														<!-- picture-->
 														<picture class="sMade__img">
 															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
@@ -476,7 +481,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-price">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -488,7 +493,7 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-1">
 														<!-- picture-->
 														<picture class="sMade__img">
 															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
@@ -530,7 +535,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-price">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -542,7 +547,7 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-2">
 														<!-- picture-->
 														<picture class="sMade__img">
 															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
@@ -584,7 +589,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-price">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -596,7 +601,7 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-3">
 														<!-- picture-->
 														<picture class="sMade__img">
 															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
@@ -638,7 +643,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-price">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -650,7 +655,7 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-4">
 														<!-- picture-->
 														<picture class="sMade__img">
 															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
@@ -692,7 +697,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-price">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -707,8 +712,8 @@
 			</section>
 			<!-- end sMade-->
 			<!-- start sExamples-->
-			<section class="sExamples section sExamples sExamples--2" id="sExamples">
-				<div class="sExamples__wrapper"><img class="picture-bg" src="img/sMainDocs-bg.jpg" alt=""/>
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn sExamples sExamples--2" id="sExamples">
+				<div class="sExamples__wrapper">
 					<div class="sExamples__container container"><img class="img img--2" src="img/road-sign-1.png" alt=""><img class="img img--3" src="img/road-sign-2.png" alt="">
 						<div class="section-title">
 							<h2><span>Выберите нужный Проект ОДД</span> (Услугу по&nbsp;ОДД и&nbsp;согласованию знаков)</h2>
@@ -738,11 +743,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1"><img src="img/sExamples-fr-1.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1"><img src="img/sExamples-bk-1.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-1"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -768,11 +773,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-2"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -798,11 +803,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-3"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -828,11 +833,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-4"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -858,11 +863,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-5"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -888,28 +893,178 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-6"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-2"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-3"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-4"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-5"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-6"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="control-wrap d-md-none">
+							<div class="control-wrap d-lg-none">
 								<div class="swiper-pagination"></div>
 							</div>
 						</div>
-						<a class="sExamples__btn sExamples__btn--blue btn-green" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						<a class="sExamples__btn sExamples__btn--blue btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
 						</a>
 					</div>
 				</div>
 			</section>
 			<!-- end sExamples-->
 			<!-- start sCases-->
-			<section class="sCases section" id="sCases">
+			<section class="sCases showAllWrap section wow animate__animated animate__fadeIn" id="sCases">
 				<div class="sCases__container container"><img class="bg" src="img/sCases-bg-1.png" alt=""/>
 					<div class="section-title text-center">
 						<h3>Примеры наших согласований &laquo;под ключ&raquo;</h3>
@@ -979,22 +1134,72 @@
 									</a>
 									<p>Согласование<br>светофора с Мосавтодор</p>
 								</div>
+								<div class="sCases__slide swiper-slide hidden-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide hidden-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide hidden-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide hidden-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide hidden-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
-					<a class="sCases__btn btn-green" href="#">ПОСМОТРЕТЬ ЕЩЕ
+					<a class="sCases__btn btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
 					</a>
 				</div>
 			</section>
 			<!-- end sCases-->
 			<!-- start sStandards-->
-			<section class="sStandards section" id="sStandards">
+			<section class="sStandards section wow animate__animated animate__fadeIn" id="sStandards">
 				<div class="sStandards__container container">
 					<div class="section-title">
 						<h2>Проект ОДД по <span>стандартам</span></h2>
 					</div>
 					<div class="sStandards__row row">
-						<div class="col-lg-6"> 
+						<div class="col-md-6">
 							<div class="sStandards__item">
 								<div class="sStandards__icon-wrap">
 									<svg class="icon icon-check ">
@@ -1004,7 +1209,7 @@
 								<p>Проектируем и&nbsp;согласовываем ОДД с&nbsp;2006&nbsp;г.&nbsp;с&nbsp;одним ИНН и&nbsp;номером телефона</p>
 							</div>
 						</div>
-						<div class="col-lg-6"> 
+						<div class="col-md-6">
 							<div class="sStandards__item">
 								<div class="sStandards__icon-wrap">
 									<svg class="icon icon-check ">
@@ -1014,7 +1219,7 @@
 								<p>Поможем с&nbsp;согласованием проекта во&nbsp;всех необходимых инстанциях</p>
 							</div>
 						</div>
-						<div class="col-lg-6"> 
+						<div class="col-md-6">
 							<div class="sStandards__item">
 								<div class="sStandards__icon-wrap">
 									<svg class="icon icon-check ">
@@ -1024,7 +1229,7 @@
 								<p>Оказываем полную поддержку в&nbsp;процессе создания плана и&nbsp;его согласования</p>
 							</div>
 						</div>
-						<div class="col-lg-6"> 
+						<div class="col-md-6">
 							<div class="sStandards__item">
 								<div class="sStandards__icon-wrap">
 									<svg class="icon icon-check ">
@@ -1035,7 +1240,7 @@
 							</div>
 						</div>
 						<div class="col-12">
-							<a class="sStandards__btn btn-green" href="#">Заказать ОДД по  стандартам
+							<a class="sStandards__btn btn-green link-modal-js" href="#modal-price">Заказать ОДД по  стандартам
 							</a>
 						</div>
 					</div><img class="img" src="img/sStandards-img-1.png" alt=""/><img class="bg" src="img/sStandards-bg-1.png" alt=""/>
@@ -1043,8 +1248,8 @@
 			</section>
 			<!-- end sStandards-->
 			<!-- start sExamples-->
-			<section class="sExamples section" id="sExamples">
-				<div class="sExamples__wrapper"><img class="picture-bg" src="img/sMainDocs-bg.jpg" alt=""/>
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn" id="sExamples">
+				<div class="sExamples__wrapper">
 					<div class="sExamples__container container"><img class="img" src="img/straight-sign.png" alt="">
 						<div class="section-title"><span>Разработанные нами проекты ОДД (Услуги по&nbsp;ОДД и&nbsp;согласованию знаков)</span>
 							<h2>Помимо согласованного проекта организации дорожного движения (ПОДД), Вы&nbsp;можете заказать:</h2>
@@ -1074,11 +1279,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1"><img src="img/sExamples-fr-1.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1"><img src="img/sExamples-bk-1.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-1"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -1104,11 +1309,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-2"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -1134,11 +1339,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-3"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -1164,11 +1369,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-4"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -1194,11 +1399,11 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-5"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
@@ -1224,28 +1429,178 @@
 												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
 												</a>
 												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
-												</a><a class="d-none" href="img/sExamples-fr-1.png" data-fancybox="example-6"></a>
+												</a>
 											</div>
 											<div class="sExamples-item__footer">
 												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
-												</div><a class="btn-green" href="#">Узнать стоимость</a>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-2"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-3"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-4"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-5"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-6"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-price">Узнать стоимость</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="control-wrap d-md-none">
+							<div class="control-wrap d-lg-none">
 								<div class="swiper-pagination"></div>
 							</div>
 						</div>
-						<a class="sExamples__btn btn-green" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						<a class="sExamples__btn btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
 						</a>
 					</div>
 				</div>
 			</section>
 			<!-- end sExamples-->
 			<!-- start sWhatWeDo-->
-			<section class="sWhatWeDo section" id="sWhatWeDo">
+			<section class="sWhatWeDo section wow animate__animated animate__fadeIn" id="sWhatWeDo">
 				<div class="sWhatWeDo__container container"><img class="img" src="img/parking-sign.png" alt=""/>
 					<div class="section-title text-center">
 						<div class="section-title__headline">Дополнительные услуги
@@ -1260,7 +1615,7 @@
 									<div class="sWhatWeDo__title">ПОДД
 									</div>
 									<p>Проекты организации дорожного движения</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1269,7 +1624,7 @@
 									<div class="sWhatWeDo__title">ПОС
 									</div>
 									<p>Проекты организации строительства</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1278,7 +1633,7 @@
 									<div class="sWhatWeDo__title">ППР
 									</div>
 									<p>Проекты производства работ</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1286,7 +1641,7 @@
 									</div>
 									<div class="sWhatWeDo__title">Проектирование дорог
 									</div>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1295,7 +1650,7 @@
 									<div class="sWhatWeDo__title">Разработка ППРк
 									</div>
 									<p>Проекты производства работ кранами</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1304,7 +1659,7 @@
 									<div class="sWhatWeDo__title">Обследование зданий
 									</div>
 									<p>Строительных конструкций или сооружений</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1313,7 +1668,7 @@
 									<div class="sWhatWeDo__title">ОАТИ
 									</div>
 									<p>Оформление разрешительных документов на производство работ</p>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
@@ -1321,7 +1676,7 @@
 									</div>
 									<div class="sWhatWeDo__title">Разработка транспортных схем
 									</div>
-									<a class="sWhatWeDo__btn btn btn-outline-light" href="#">Заказать
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call">Заказать
 									</a>
 								</div>
 						</div>
@@ -1331,7 +1686,7 @@
 			</section>
 			<!-- end sWhatWeDo-->
 			<!-- start sCoordinate-->
-			<section class="sCoordinate section bg-wrap" id="sCoordinate"><img class="picture-bg" src="img/sCoordinate-bg-1.png" alt="" loading="lazy"/>
+			<section class="sCoordinate section wow animate__animated animate__fadeIn bg-wrap" id="sCoordinate"><img class="picture-bg" src="img/sCoordinate-bg-1.png" alt="" loading="lazy"/>
 				<div class="sCoordinate__container container"><img class="bg" src="img/sCoordinate-bg-2.png" alt=""/>
 					<div class="section-title text-center">
 						<div class="section-title__headline">Согласование с гарантией, прописанной в договоре
@@ -1370,7 +1725,7 @@
 				</div>
 			</section>
 			<!-- end sCoordinate-->
-			<section class="sOpen section" id="sOpen">
+			<section class="sOpen sOpen--2 sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
 				<div class="sOpen__container container">
 					<div class="section-title section-title--2 text-center">
 						<h2><span>Отзывы постоянных клиентов</span> о&nbsp;наших работах</h2>
@@ -1438,7 +1793,7 @@
 			</section>
 			<!-- end sOpen-->
 			<!-- start sOpen-->
-			<section class="sOpen sOpen--js section" id="sOpen">
+			<section class="sOpen sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
 				<div class="sOpen__container container">
 					<div class="sOpen__bg d-none d-xl-block"><img src="img/@2x/sOpen-img.png" alt=""/>
 					</div>
@@ -1518,7 +1873,7 @@
 			</section>
 			<!-- end sOpen-->
 			<!-- start sOrder-->
-			<section class="sOrder section">
+			<section class="sOrder section wow animate__animated animate__fadeIn">
 				<!-- picture-->
 				<picture class="sOrder__bg d-none d-xl-flex">
 					<source type="image/webp" srcset="img/@2x/webp/sOrder-pencil.webp"/><img src="img/@2x/sOrder-pencil.png" alt="" loading="lazy"/>
@@ -1583,9 +1938,8 @@
 			</section>
 			<!-- end sOrder-->
 			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
-				<div class="sContact__map d-none d-md-block">
-					<div class="make-yandex-lazy-js" data-src="&lt;script async src=&quot;https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;amp;width=1080&amp;amp;height=518&amp;amp;lang=ru_RU&amp;amp;scroll=false&quot;&gt;&lt;/script&gt;"></div>
+			<section class="sContact section wow animate__animated animate__fadeIn" id="sContact">
+				<div class="sContact__map d-none d-md-block"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.237698844028!2d37.58539121609216!3d55.875891289959085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53713f979d8ab%3A0x5dceb3b0f131d39b!2zQWx0dWYneWV2c2tveWUgU2hvc3NlLCA0OCDQutC-0YDQv9GD0YEgMSwgTW9za3ZhLCBSdXNzaWEsIDEyNzU2Ng!5e0!3m2!1sen!2slv!4v1668595977341!5m2!1sen!2slv" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="sContact__container container">
 					<div class="sContact__box-wrap">
@@ -1612,7 +1966,7 @@
 				</div>
 			</section>
 			<!-- end sContact-->
-			<footer class="footer">
+			<footer class="footer wow animate__animated animate__fadeIn">
 				<div class="container text-center text-md-start">
 					<div class="footer__row row align-items-center">
 						<div class="col-md-auto">
@@ -1662,10 +2016,10 @@
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
 						<div class="modal-win__title">
-							Рассчитайте стоимость проекта
+							Рассчитайте стоимость проекта ОДД
 							<span>за 1 минуту</span>
 						</div>
-						<p>Выберите вид ППР для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
+						<p>Выберите вид ОДД для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
 					</div>
 					<div class="form-wrap">
 						<form>
@@ -1733,7 +2087,7 @@
 				<div class="col-lg">
 					<!-- picture-->
 					<picture class="modal-win__paper">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-1.webp"/><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
+						<source type="image/webp" srcset="img/@2x/webp/modal-paper-3.webp"/><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
@@ -1744,7 +2098,7 @@
 			<div class="modal-win__row row gy-4">
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
-						<div class="modal-win__title">Узнать стоимость такого ППР
+						<div class="modal-win__title">Не нашли что искали?
 						</div>
 						<p>Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.</p>
 					</div>
@@ -1770,7 +2124,7 @@
 				<div class="col-lg">
 					<!-- picture-->
 					<picture class="modal-win__paper ">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-3.webp"/><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
+						<source type="image/webp" srcset="img/@2x/webp/modal-paper-1.webp"/><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
@@ -1793,6 +2147,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/typed.js/lib/typed.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

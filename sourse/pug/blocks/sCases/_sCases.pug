@@ -1,6 +1,6 @@
 mixin sCases(data)
 	// start sCases
-	+b.SECTION.sCases.section#sCases&attributes(attributes)
+	+b.SECTION.sCases.showAllWrap.section#sCases.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.container.container
 			img(src="img/sCases-bg-1.png", alt="").bg
 			+b.section-title.text-center
@@ -22,7 +22,7 @@ mixin sCases(data)
 			+e.slider.default-slider--js.swiper
 				.swiper-wrapper
 					mixin slide(img, text)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide&attributes(attributes)
 							+e.img-wrap(href=`img/sCases-slide-lg-${img}.jpg` data-fancybox=`sCases-slide-${j}`)
 								img(src=`img/sCases-slide-${img}.jpg`, alt="")
 								+e.icon-wrap
@@ -30,6 +30,11 @@ mixin sCases(data)
 							p!= text
 					-for(j = 0; j < 4; j++)
 						+slide('1', 'Согласование<br>светофора с Мосавтодор')
+					+slide('1', 'Согласование<br>светофора с Мосавтодор').hidden-slide
+					+slide('1', 'Согласование<br>светофора с Мосавтодор').hidden-slide
+					+slide('1', 'Согласование<br>светофора с Мосавтодор').hidden-slide
+					+slide('1', 'Согласование<br>светофора с Мосавтодор').hidden-slide
+					+slide('1', 'Согласование<br>светофора с Мосавтодор').hidden-slide
 				.swiper-pagination
-			+e.btn.btn-green(href='#') ПОСМОТРЕТЬ ЕЩЕ
+			+e.btn.btn-green.btn-show-more(href='#') ПОСМОТРЕТЬ ЕЩЕ
 	// end sCases

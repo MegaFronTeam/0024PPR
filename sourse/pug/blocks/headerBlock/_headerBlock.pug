@@ -1,6 +1,6 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.SECTION.headerBlock.section#headerBlock&attributes(attributes)
+	+b.SECTION.headerBlock.section#headerBlock.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+pic('headerBlock-bg.jpg')(class="headerBlock__bg")
 		.container
 			+pic('headerBlock-paper.png')(class="headerBlock__paper d-none d-lg-block")
@@ -25,12 +25,12 @@ mixin headerBlock()
 			+e.btn-row.row
 				.col-sm-auto
 					.text-center.text-md-start
-						+e.btn(href="#")
+						+e.btn.link-modal-js(href='#modal-call')
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
 							span БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
 				.col-sm-auto
 					.text-center.text-md-start
-						+e.btn--blue(href="#")
+						+e.btn--blue.link-modal-js(href='#modal-call')
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
 							span СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА 
 	// end headerBlock

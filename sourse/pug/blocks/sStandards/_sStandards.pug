@@ -1,6 +1,6 @@
 mixin sStandards(data)
 	// start sStandards
-	+b.SECTION.sStandards.section#sStandards&attributes(attributes)
+	+b.SECTION.sStandards.section#sStandards.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.container.container
 			+b.section-title
 				h2 Проект ОДД по 
@@ -11,16 +11,16 @@ mixin sStandards(data)
 						+e.icon-wrap
 							+icon('check')
 						p!= text
-				.col-lg-6 
+				.col-md-6
 					+item('Проектируем и&nbsp;согласовываем ОДД с&nbsp;2006&nbsp;г.&nbsp;с&nbsp;одним ИНН и&nbsp;номером телефона')
-				.col-lg-6 
+				.col-md-6
 					+item('Поможем с&nbsp;согласованием проекта во&nbsp;всех необходимых инстанциях')
-				.col-lg-6 
+				.col-md-6
 					+item('Оказываем полную поддержку в&nbsp;процессе создания плана и&nbsp;его согласования')
-				.col-lg-6 
+				.col-md-6
 					+item('Сроки разработки и&nbsp;согласования проекта от&nbsp;2-х дней с&nbsp;гарантией под ключ')
 				.col-12
-					+e.btn.btn-green(href='#') Заказать ОДД по  стандартам
+					+e.btn.btn-green.link-modal-js(href='#modal-price') Заказать ОДД по  стандартам
 			img(src="img/sStandards-img-1.png", alt="").img
 			img(src="img/sStandards-bg-1.png", alt="").bg
 	// end sStandards

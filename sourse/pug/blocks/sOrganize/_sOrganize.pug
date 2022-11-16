@@ -1,6 +1,6 @@
 mixin sOrganize(data)
 	// start sOrganize
-	+b.SECTION.sOrganize.section#sOrganize&attributes(attributes)
+	+b.SECTION.sOrganize.section#sOrganize.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.container.container
 			img(src="img/sOrganize-img-1.png", alt="").img
 			+b.section-title.text-center
@@ -11,16 +11,16 @@ mixin sOrganize(data)
 						+e.icon-wrap
 							+icon('check')
 						p!= text
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('При прокладке<br>инженерных сетей')
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('Для АЗС и&nbsp;объектов дорожного сервиса')
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('При занятии Проезжей части при производстве работ')
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('Для жилых комплексов, производственных<br>объектов и&nbsp;частных домов')
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('При установке<br>лесов/пешеходной галереи')
-				.col-lg-4
+				.col-md-6.col-lg-4
 					+item('При строительстве/ реконструкции съездов с дорог')
 	// end sOrganize

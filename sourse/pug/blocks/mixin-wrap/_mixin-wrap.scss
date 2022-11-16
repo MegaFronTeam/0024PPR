@@ -20,6 +20,7 @@
 		padding: 0;
 		background: var(--bgColor);
 		border-color: transparent;
+		border: none;
 		&:hover{
 			// background: $primary;
 			box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);

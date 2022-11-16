@@ -3,7 +3,7 @@ mixin sExamplesSlider()
 		+b.slider-examples--js.swiper
 			.swiper-wrapper
 				block
-		+b.control-wrap.d-md-none
+		+b.control-wrap.d-lg-none
 			//- +arrow
 			.swiper-pagination
 
@@ -30,20 +30,20 @@ mixin sExamples-item(title, img)
 				img(src=`img/sExamples-fr-${img}.png`, alt="")
 			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
 				img(src=`img/sExamples-bk-${img}.png`, alt="")
-			a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
+			//- a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
 			//- +e.result <span>Результат</span> нашей работы:
 			//- 	+icon('result-arrow')
 		+e.footer
 			+e.price 	Цена 
 				strong от 10 000 руб.
-			a(href="#").btn-green Узнать стоимость
+			a.link-modal-js(href='#modal-price').btn-green Узнать стоимость
 
 mixin sExamples(secondTitle, blue)
 	// start sExamples
-	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+	+b.SECTION.sExamples.section.showAllWrap#sExamples.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+e.wrapper
 
-			img(src="img/sMainDocs-bg.jpg" alt="").picture-bg
+			//- img(src="img/sMainDocs-bg.jpg" alt="").picture-bg
 			+e.container.container
 				block
 				if secondTitle
@@ -66,9 +66,20 @@ mixin sExamples(secondTitle, blue)
 						+sExamples-item(`Проектирование АСУДД/светофоров`,'5')
 					+e.slide.swiper-slide
 						+sExamples-item(`Нанесение дорожной разметки`,'6')
+					//-  скрытые элементы
+					+e.slide.hidden-slide.swiper-slide
+						+sExamples-item(`Проекты ОДД<br>и схемы ОДД`,'2')
+					+e.slide.hidden-slide.swiper-slide
+						+sExamples-item(`Нанесение дорожной разметки`,'3')
+					+e.slide.hidden-slide.swiper-slide
+						+sExamples-item(`Проектирование автомобильных дорог`,'4')
+					+e.slide.hidden-slide.swiper-slide
+						+sExamples-item(`Проектирование АСУДД/светофоров`,'5')
+					+e.slide.hidden-slide.swiper-slide
+						+sExamples-item(`Нанесение дорожной разметки`,'6')
 				if blue
-					+e.btn--blue.btn-green(href="#") ПОСМОТРЕТЬ ЕЩЕ
+					+e.btn--blue.btn-green.btn-show-more(href="#") ПОСМОТРЕТЬ ЕЩЕ
 				else
-					+e.btn.btn-green(href="#") ПОСМОТРЕТЬ ЕЩЕ
+					+e.btn.btn-green.btn-show-more(href="#") ПОСМОТРЕТЬ ЕЩЕ
 
 	// end sExamples

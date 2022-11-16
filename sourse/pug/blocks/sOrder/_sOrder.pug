@@ -1,6 +1,6 @@
 mixin sOrder(data)
 	// start sOrder
-	+b.SECTION.sOrder.section&attributes(attributes)
+	+b.SECTION.sOrder.section.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		if data.pencil
 			+pic('sOrder-pencil.png')(class="sOrder__bg d-none d-xl-flex")
 		+e.container.container
