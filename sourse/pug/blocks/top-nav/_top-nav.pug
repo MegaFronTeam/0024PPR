@@ -53,18 +53,18 @@ mixin top-nav()
 						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
 						span С-проджект
 					+e.text Проектирование<br>и согласование организации дорожного движения
-				.col-auto.align-self-start.d-lg-none
-					+e.since-row.row
-						.col-auto
-							+e.flag 4,8
-						.col
-							+e.stars
-								-for(var i = 0; i < 5; i++)
-									+icon('star')
-							+e.s-txt
-								b Работаем с 2006 года.
-								|
-								| Рейтинг на основании 180 отзывов
+				//- .col-auto.align-self-start.d-lg-none
+				//- 	+e.since-row.row
+				//- 		.col-auto
+				//- 			+e.flag 4,8
+				//- 		.col
+				//- 			+e.stars
+				//- 				-for(var i = 0; i < 5; i++)
+				//- 					+icon('star')
+				//- 			+e.s-txt
+				//- 				b Работаем с 2006 года.
+				//- 				|
+				//- 				| Рейтинг на основании 180 отзывов
 				.col-auto.col-lg.d-none.d-lg-block
 					+e.ball-row.row.scroll-link(href="#sContact")
 						.col-auto
@@ -89,12 +89,12 @@ mixin top-nav()
 					//- 			br
 					//- 			|  Задайте в WhatsApp
 					+soc
-				.col.col-lg-auto.text-end.d-none.d-sm-block
+				.col.col-lg-auto.text-end
 					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
 					div
 						+e.tell(href="telto:+74959713971") +7 (495) 971-39-71
 				.col-auto.d-none.d-md-block
-					+e.callback-btn.link-modal-js(href="#modal-call") перезвоните мне
+					+e.callback-btn.link-modal-js(href="#modal-call" data-order="Вызов модалки в шапке" data-src="img/@2x/modal-paper-1.png") перезвоните мне
 				.col-auto.d-lg-none.ms-auto
 					.row.gx-1
 						.col-auto

@@ -7,7 +7,7 @@ mixin sExamplesSlider()
 			//- +arrow
 			.swiper-pagination
 
-mixin sExamples-item(title, img)
+mixin sExamples-item(title, img, imgFancyBox=img)
 	+b.sExamples-item
 		+e.title!= title 
 		.toggle-wrap
@@ -24,11 +24,11 @@ mixin sExamples-item(title, img)
 					li Проектируем ОДД на&nbsp;любой вид строительных работ
 		p Пример проекта
 		+e.images-block
-			a(href=`img/sExamples-bg-${img}.png` data-fancybox=`example-${img}`)
+			a(href=`img/sExamples-bg-${img}.png` data-fancybox=`example-${imgFancyBox}`)
 				img(src=`img/sExamples-bg-${img}.png` alt="").bg-img
-			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${img}`)
+			+e.img--front(href=`img/sExamples-fr-${img}.png` data-fancybox=`example-${imgFancyBox}`)
 				img(src=`img/sExamples-fr-${img}.png`, alt="")
-			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${img}`)
+			+e.img--back(href=`img/sExamples-bk-${img}.png` data-fancybox=`example-${imgFancyBox}`)
 				img(src=`img/sExamples-bk-${img}.png`, alt="")
 			//- a(href=`img/sExamples-fr-1.png` data-fancybox=`example-${img}`).d-none
 			//- +e.result <span>Результат</span> нашей работы:
@@ -68,15 +68,15 @@ mixin sExamples(secondTitle, blue)
 						+sExamples-item(`Нанесение дорожной разметки`,'6')
 					//-  скрытые элементы
 					+e.slide.hidden-slide.swiper-slide
-						+sExamples-item(`Проекты ОДД<br>и схемы ОДД`,'2')
+						+sExamples-item(`Проекты ОДД<br>и схемы ОДД`,'2', '7')
 					+e.slide.hidden-slide.swiper-slide
-						+sExamples-item(`Нанесение дорожной разметки`,'3')
+						+sExamples-item(`Нанесение дорожной разметки`,'3', '8')
 					+e.slide.hidden-slide.swiper-slide
-						+sExamples-item(`Проектирование автомобильных дорог`,'4')
+						+sExamples-item(`Проектирование автомобильных дорог`,'4', '8')
 					+e.slide.hidden-slide.swiper-slide
-						+sExamples-item(`Проектирование АСУДД/светофоров`,'5')
+						+sExamples-item(`Проектирование АСУДД/светофоров`,'5', '9')
 					+e.slide.hidden-slide.swiper-slide
-						+sExamples-item(`Нанесение дорожной разметки`,'6')
+						+sExamples-item(`Нанесение дорожной разметки`,'6', '10')
 				if blue
 					+e.btn--blue.btn-green.btn-show-more(href="#") ПОСМОТРЕТЬ ЕЩЕ
 				else

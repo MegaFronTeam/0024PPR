@@ -80,8 +80,10 @@ const JSCCommon = {
 							}
 
 							el.tagName == "INPUT"
-								? el.value = val
-								: el.innerHTML = val;
+								? el.value = val 
+								: "IMG" 
+								? el.src = val
+								: el.innerHTML = val
 						}
 					}
 					setValue(data.title, '.title-js');
@@ -89,6 +91,7 @@ const JSCCommon = {
 					
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
+					setValue(data.src, '.modal-win__paper img');
 				})
 			})
 		}
