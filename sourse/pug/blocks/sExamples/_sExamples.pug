@@ -36,7 +36,7 @@ mixin sExamples-item(title, img, imgFancyBox=img)
 		+e.footer
 			+e.price 	Цена 
 				strong от 10 000 руб.
-			a.link-modal-js(href='#modal-price').btn-green Узнать стоимость
+			a.link-modal-js(href="#modal-call" data-order=`Вызов модалки по "${title}"` data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!").btn-green Узнать стоимость
 
 mixin sExamples(secondTitle, blue)
 	// start sExamples

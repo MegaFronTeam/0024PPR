@@ -79,19 +79,21 @@ const JSCCommon = {
 								return
 							}
 
-							el.tagName == "INPUT"
-								? el.value = val 
-								: "IMG" 
-								? el.src = val
+							el.tagName == "INPUT" ? el.value = val 
+								: el.tagName == "IMG" ? el.src = val
 								: el.innerHTML = val
 						}
 					}
-					setValue(data.title, '.title-js');
-					setValue(data.price, '.price-js');
+					// function setImage(src) {
+					// 	return `img/@2x/${src}`
+					// }
+					// setValue(data.title, '.title-js');
+					// setValue(data.price, '.price-js');
 					
+					setValue(data.title, '.modal-win__title--js');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
-					setValue(data.src, '.modal-win__paper img');
+					setValue(data.pic, '.modal-win__paper img');
 				})
 			})
 		}

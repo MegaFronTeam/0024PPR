@@ -15,9 +15,6 @@ mixin topLine()
 	+b.fixed-line--js
 		.container-lg
 			+e.row.row.align-items-center.gy-3
-				//-.col-auto.d-lg-none
-					+e.burger(class="toggle-menu-mobile--js")
-						span
 				.col.d-lg-none
 					+e.logo(href='/')
 						img(loading="lazy" src="img/svg/logo-new.svg" alt="")
@@ -47,8 +44,10 @@ mixin topLine()
 								img(loading="lazy" src="img/svg/wa-icon.svg" alt="")
 				.col-auto.d-none.d-lg-block
 					//-+e.callback-btn(href="#") Обратный звонок
-					+e.callback-btn.link-modal-js(href="#modal-call") перезвоните мне
-
+					+e.callback-btn.link-modal-js(href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!") перезвоните мне
+				.col-auto.d-lg-none
+					+e.burger(class="toggle-menu-mobile--js")
+						span
 	// end topLine
 
 mixin topLineSlide(txt, href="#")

@@ -25,12 +25,12 @@ mixin headerBlock()
 			+e.btn-row.row
 				.col-sm-auto
 					.text-center.text-md-start
-						+e.btn.link-modal-js(href='#modal-call')
+						+e.btn.link-modal-js(href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="img/@2x/modal-paper-3.png" data-title="Не нашли что искали?")
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
 							span БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
 				.col-sm-auto
 					.text-center.text-md-start
-						+e.btn--blue.link-modal-js(href='#modal-call')
+						+e.btn--blue.link-modal-js(href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!")
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
 							span СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА 
 	// end headerBlock

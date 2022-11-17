@@ -37,11 +37,11 @@ mixin modal()
 		+e.row.row.gy-4
 			+e.col--title.col-lg-auto.text-center.text-lg-start
 				+e.title-bl
-					+e.title Мы перезвоним!
+					+e.title--js
 					p Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.
 				+form-wrap
-					input.title-js(type="hidden" value="" name="title")
-					input.price-js(type="hidden" value="" name="price")
+					//- input.title-js(type="hidden" value="" name="title")
+					//- input.price-js(type="hidden" value="" name="price")
 					+e.inputs
 						+e.input-wrap--user
 							+e.INPUT.input--name.form-control(type="text" placeholder="Ваше имя" name="name")
@@ -59,31 +59,31 @@ mixin modal()
 			.col-lg
 				+pic('modal-paper-3.png')(class="modal-win__paper")
 	//
-	+b.modal-win(id="modal-price" style="display: none")
-		+e.row.row.gy-4
-			+e.col--title.col-lg-auto.text-center.text-lg-start
-				+e.title-bl
-					+e.title Не нашли что искали?
-					p Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.
-				+form-wrap
-					input.title-js(type="hidden" value="" name="title")
-					input.price-js(type="hidden" value="" name="price")
-					+e.inputs
-						+e.input-wrap
-							+e.INPUT.input--name.form-control(type="tel" placeholder="Ваше имя" name="tel")
-							img(loading="lazy" src="img/svg/modal-user.svg" alt="")
-						+e.input-wrap
-							+e.INPUT.input--tel.form-control(type="tel" placeholder="номер телефона" name="tel")
-							img(loading="lazy" src="img/svg/modal-tel.svg" alt="")
-						+e.btn--leave(type="submit")
-							span оставить заявку
-							span и получить скидку 15% на первый проект ОДД
-					+e.policy
-						| Нажимая на кнопку вы соглашаетесь с
-						|
-						a(href="#") политикой конфиденциальности
-			.col-lg
-				+pic('modal-paper-1.png')(class="modal-win__paper ")
+	//- +b.modal-win(id="modal-price" style="display: none")
+	//- 	+e.row.row.gy-4
+	//- 		+e.col--title.col-lg-auto.text-center.text-lg-start
+	//- 			+e.title-bl
+	//- 				+e.title Не нашли что искали?
+	//- 				p Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.
+	//- 			+form-wrap
+	//- 				//- input.title-js(type="hidden" value="" name="title")
+	//- 				//- input.price-js(type="hidden" value="" name="price")
+	//- 				+e.inputs
+	//- 					+e.input-wrap
+	//- 						+e.INPUT.input--name.form-control(type="tel" placeholder="Ваше имя" name="tel")
+	//- 						img(loading="lazy" src="img/svg/modal-user.svg" alt="")
+	//- 					+e.input-wrap
+	//- 						+e.INPUT.input--tel.form-control(type="tel" placeholder="номер телефона" name="tel")
+	//- 						img(loading="lazy" src="img/svg/modal-tel.svg" alt="")
+	//- 					+e.btn--leave(type="submit")
+	//- 						span оставить заявку
+	//- 						span и получить скидку 15% на первый проект ОДД
+	//- 				+e.policy
+	//- 					| Нажимая на кнопку вы соглашаетесь с
+	//- 					|
+	//- 					a(href="#") политикой конфиденциальности
+	//- 		.col-lg
+	//- 			+pic('modal-paper-1.png')(class="modal-win__paper")
 	//
 	+b.m-thanks.modal-win(id="modal-thanks" style="display: none")
 		.text-center

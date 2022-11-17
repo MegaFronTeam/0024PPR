@@ -111,6 +111,9 @@
 		white-space: nowrap;
 
 		}
+		@media (max-width: 450px) {
+			width: rem(98);
+		}
 		@media (min-width: 375px) {
 			margin-left: 4px;
 			margin-right: 12px;
@@ -129,6 +132,9 @@
 			margin-right: rem(5);
 			@include media-breakpoint-up(sm){
 				margin-right: rem(7);
+			}
+			@media (max-width: 450px) {
+				width: rem(16);
 			}
 		}
 		span{

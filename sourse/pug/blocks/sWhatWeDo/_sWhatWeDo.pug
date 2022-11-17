@@ -16,7 +16,7 @@ mixin sWhatWeDo(data)
 							+e.title!= title
 							if text
 								p!= text
-							+e.btn.btn.btn-outline-light.link-modal-js(href='#modal-call') Заказать
+							+e.btn.btn.btn-outline-light.link-modal-js(href="#modal-call" data-order=`Вызов модалки по "${title}"` data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!") Заказать
 					+slide('1', 'ПОДД', 'Проекты организации дорожного движения')
 					+slide('2', 'ПОС', 'Проекты организации строительства')
 					+slide('3', 'ППР', 'Проекты производства работ')

@@ -19,7 +19,7 @@ mixin sMade(data)
 
 	// end sMade
 
-mixin sMadeSlide(imgNum, i)
+mixin sMadeSlide(imgNum, i, title='Проект производства работ  для электромонтажа')
 	.swiper-slide
 		+e.item-wrap
 			+e.item
@@ -32,7 +32,7 @@ mixin sMadeSlide(imgNum, i)
 								+icon('zoom-pl')
 					+e.col--content.col-lg-6.col-xl.text-center.text-lg-start
 						block
-						+e.title Проект производства работ  для электромонтажа
+						+e.title!= title
 						+e.client Клиент: ООО «ПромТоргСтрой»
 						+e.b-row.row.justify-content-lg-start.justify-content-center
 							.col-12
@@ -43,7 +43,7 @@ mixin sMadeSlide(imgNum, i)
 											+icon('star')
 							+sMadeSlideBlue('7 листов графической части')
 							+sMadeSlideBlue('230 страниц')
-						+e.btn.link-modal-js(href='#modal-price') Узнать стоимость такого ппр
+						+e.btn.link-modal-js(href="#modal-call" data-order=`Вызов модалки на слайде '${title}'` data-pic="img/@2x/modal-paper-3.png" data-title="Не нашли что искали?") Узнать стоимость такого ппр
 
 mixin sMadeSlideBlue(txt)
 	.col-md-auto
