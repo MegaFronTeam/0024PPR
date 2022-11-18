@@ -31,9 +31,9 @@ mixin topLine()
 								+topLineSlide('О компании')
 								+topLineSlide('Контакты')
 				+e.mail-col.col-auto.text-end
-					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
 					div
 						+e.tell(href="telto:+74959713971") +7 (495) 971-39-71
+					+e.mail(href="mailto:mail@orgdoc.ru") mail@orgdoc.ru
 				.col-auto.d-lg-none
 					.row.gx-1
 						//-.col-auto
@@ -42,6 +42,9 @@ mixin topLine()
 						.col-auto
 							+e.wa-btn(href="#")
 								img(loading="lazy" src="img/svg/wa-icon.svg" alt="")
+						.col-auto
+							+e.wa-btn(href="#")
+								img(loading="lazy" src="img/svg/tg-icon.svg" alt="")
 				.col-auto.d-none.d-lg-block
 					//-+e.callback-btn(href="#") Обратный звонок
 					+e.callback-btn.link-modal-js(href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!") перезвоните мне

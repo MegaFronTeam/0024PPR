@@ -29,12 +29,15 @@
 		margin-left: auto;
 		margin-right: auto;
 		h3 {
-			font-size: rem(32);
+			font-size: rem(28.5);
 			margin-bottom: 0;
 			line-height: 1.2em;
 			font-weight: 400;
 			span {
 				color: $green3;
+			}
+			@include media-breakpoint-up(sm) {
+				font-size: rem(32);
 			}
 			@include media-breakpoint-up(lg) {
 				font-size: rem(40);
@@ -53,11 +56,14 @@
 		align-items: center;
 		height: 100%;
 		p {
-			font-size: rem(18);
+			font-size: 13px;
 			font-weight: 600;
 			line-height: 1.22em;
 			margin-bottom: 0;
 			// max-width: rem(233);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(18);
+			}
 		}
 	}
 	&__icon-wrap {

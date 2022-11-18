@@ -3,6 +3,8 @@
 	--sPT: #{rem(65)};
 	--sPB: #{rem(17)};
 	// --sTPB: #{rem()};
+	position: relative;
+	z-index: 1;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(137)};
 		--sPB: #{rem(55)};
@@ -12,12 +14,17 @@
 		z-index: 1;
 	}
 	.img {
-		max-width: 100%;
-		@include media-breakpoint-up(lg) {
-			position: absolute;
-			z-index: -1;
-			right: -670px;
-    	top: -440px;
+		max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+		img {
+			max-width: 100%;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				z-index: -1;
+				right: -510px;
+				top: -440px;
+			}
 		}
 	}
 	.bg {

@@ -20,7 +20,9 @@ mixin sStandards(data)
 				.col-md-6
 					+item('Сроки разработки и&nbsp;согласования проекта от&nbsp;2-х дней с&nbsp;гарантией под ключ')
 				.col-12
-					+e.btn.btn-green.link-modal-js(href="#modal-call" data-order="Вызов модалки по кнопке 'Заказать ОДД по  стандартам'" data-pic="img/@2x/modal-paper-3.png" data-title="Не нашли что искали?") Заказать ОДД по  стандартам
-			img(src="img/sStandards-img-1.png", alt="").img
+					+e.btn.btn-green.link-modal-js(href="#modal-call" data-order="Вызов модалки по кнопке 'Заказать ОДД по  стандартам'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!") Заказать ОДД по  стандартам
+			picture.img
+				source(media="(max-width:991px)" srcset="img/sStandards-img-2.png", alt="")
+				img(src="img/sStandards-img-1.png", alt="").img
 			img(src="img/sStandards-bg-1.png", alt="").bg
 	// end sStandards

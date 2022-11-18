@@ -112,7 +112,7 @@
 
 		}
 		@media (max-width: 450px) {
-			width: rem(98);
+			width: 100%;
 		}
 		@media (min-width: 375px) {
 			margin-left: 4px;
@@ -134,7 +134,7 @@
 				margin-right: rem(7);
 			}
 			@media (max-width: 450px) {
-				width: rem(16);
+				width: 14px;
 			}
 		}
 		span{
@@ -143,7 +143,9 @@
 			@include media-breakpoint-up(sm){
 				font-size: rem(15);
 			}
-
+			@media (max-width: 450px) {
+				font-size: 11px;
+			}
 			line-height: 1;
 			text-transform: uppercase;
 			color: $green2;
