@@ -3,7 +3,10 @@ mixin headerBlock()
 	+b.SECTION.headerBlock.section#headerBlock.wow.animate__animated.animate__fadeIn&attributes(attributes)
 		+pic('headerBlock-bg.jpg')(class="headerBlock__bg")
 		.container
-			+pic('headerBlock-paper.png')(class="headerBlock__paper d-none d-lg-block")
+			//- +pic('headerBlock-paper.png')(class="headerBlock__paper d-none d-lg-block")
+			//- picture.headerBlock__paper
+			//- 	source(media="(min-width: 992px)", srcset="img/@2x/headerBlock-paper.png")
+			//- 	img(src="img/headerBlock-bg-1.png", alt="")
 			+b.section-title
 				//- h1
 				//- 	| Разработка ППР
@@ -22,13 +25,16 @@ mixin headerBlock()
 				//- 	+headerBlockItem('Сроки', '2–3 дня')
 				//- .col-sm-6.col-md-auto
 				//- 	+headerBlockItem('Предоплата', 'Без предоплаты')
+			picture.headerBlock__paper
+				source(media="(min-width: 992px)", srcset="img/@2x/headerBlock-paper.png")
+				img(src="img/headerBlock-bg-1.png", alt="")
 			+e.btn-row.row
-				.col-sm-auto
+				.col-lg-auto
 					.text-center.text-md-start
 						+e.btn.link-modal-js(href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!")
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
 							span БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
-				.col-sm-auto
+				.col-lg-auto
 					.text-center.text-md-start
 						+e.btn--blue.link-modal-js(href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!")
 							//- img(loading="lazy" src="img/svg/calc.svg" alt="")
