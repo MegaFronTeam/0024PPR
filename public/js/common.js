@@ -523,10 +523,10 @@ function eventHandler() {
 			$(showshowAllWrap.querySelector('.btn-show-more')).click(function(e) {
 				e.preventDefault();
 				$(this).hide();
-				let showshowAllSlide = showshowAllWrap.querySelectorAll('.hidden-slide');
-				$(showshowAllSlide).slideDown(function() {
-					// $(this).addClass('active');
-				});
+				let showshowAllSlides = showshowAllWrap.querySelectorAll('.hidden-slide');
+				for (let showshowAllSlide of showshowAllSlides) {
+					$(showshowAllSlide).slideDown();
+				}
 			});
 		}
 	}

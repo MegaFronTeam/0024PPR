@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -40,7 +41,7 @@
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Контакты</a></li>
 					</UL>
-					<a class="menu-mobile__callback-btn link-modal-js" href="#modal-call">перезвоните мне
+					<a class="menu-mobile__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Обратный звонок
 					</a>
 					<div class="menu-mobile__tell-row row justify-content-between">
 						<div class="col-auto">
@@ -97,36 +98,6 @@
 								<div class="top-nav__text">Проектирование<br>и согласование организации дорожного движения
 								</div>
 							</div>
-							<div class="col-auto align-self-start d-lg-none">
-								<div class="top-nav__since-row row">
-									<div class="col-auto">
-										<div class="top-nav__flag">4,8
-										</div>
-									</div>
-									<div class="col">
-										<div class="top-nav__stars">
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-										</div>
-										<div class="top-nav__s-txt"><b>Работаем с 2006 года.</b>
-											Рейтинг на основании 180 отзывов
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="col-auto col-lg d-none d-lg-block">
 								<a class="top-nav__ball-row row scroll-link" href="#sContact">
 									<div class="col-auto">
@@ -158,7 +129,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="col col-lg-auto text-end d-none d-sm-block">
+							<div class="col col-lg-auto text-end">
 								<a class="top-nav__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
 								</a>
 								<div>
@@ -167,7 +138,7 @@
 								</div>
 							</div>
 							<div class="col-auto d-none d-md-block">
-								<a class="top-nav__callback-btn link-modal-js" href="#modal-call">Обратный звонок
+								<a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
 								</a>
 							</div>
 							<div class="col-auto d-lg-none ms-auto">
@@ -227,23 +198,27 @@
 								</div>
 							</div>
 							<div class="fixed-line__mail-col col-auto text-end">
-								<a class="fixed-line__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
-								</a>
 								<div>
 									<a class="fixed-line__tell" href="telto:+74959713971">+7 (495) 971-39-71
 									</a>
 								</div>
+								<a class="fixed-line__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
+								</a>
 							</div>
 							<div class="col-auto d-lg-none">
 								<div class="row gx-1">
 									<div class="col-auto">
-										<a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/wa2.svg" alt=""/>
+										<a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/wa-icon.svg" alt=""/>
+										</a>
+									</div>
+									<div class="col-auto">
+										<a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
 										</a>
 									</div>
 								</div>
 							</div>
 							<div class="col-auto d-none d-lg-block">
-								<a class="fixed-line__callback-btn link-modal-js" href="#modal-call">перезвоните мне
+								<a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
 								</a>
 							</div>
 						</div>
@@ -253,15 +228,9 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<section class="headerBlock section" id="headerBlock">
+			<section class="headerBlock section wow animate__animated animate__fadeIn" id="headerBlock">
 				<!-- picture-->
-				<picture class="headerBlock__bg">
-					<source type="image/webp" srcset="img/@2x/webp/headerBlock-bg.webp"/><img src="img/@2x/headerBlock-bg.jpg" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<!-- picture-->
-				<picture class="headerBlock__paper d-none d-lg-block">
-					<source type="image/webp" srcset="img/@2x/webp/headerBlock-paper.webp"/><img src="img/@2x/headerBlock-paper.png" alt="" loading="lazy"/>
+				<picture class="headerBlock__bg"><img src="img/@2x/headerBlock-bg.jpg" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
 				<div class="container">
@@ -269,7 +238,7 @@
 						<h1><strong>Разработка проекта ОДД</strong><br>для <span>любой задачи</span><br>с гарантией согласования 100%</h1>
 					</div>
 					<div class="headerBlock__row row">
-						<div class="col-6 col-md-auto order-first order-md-0">
+						<div class="col-sm-6 col-md-auto order-first order-md-0">
 							<div class="headerBlock__item">
 								<div class="headerBlock__i-row row align-items-center">
 									<div class="col-auto">
@@ -298,16 +267,19 @@
 							</div>
 						</div>
 					</div>
+					<picture class="headerBlock__paper">
+						<source media="(min-width: 992px)" srcset="img/@2x/headerBlock-paper.png"/><img src="img/headerBlock-bg-1.png" alt=""/>
+					</picture>
 					<div class="headerBlock__btn-row row">
-						<div class="col-sm-auto">
+						<div class="col-lg-auto">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn" href="#"><span>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
+								<a class="headerBlock__btn link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><span>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
 								</a>
 							</div>
 						</div>
-						<div class="col-sm-auto">
+						<div class="col-lg-auto d-none d-lg-block">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn headerBlock__btn--blue" href="#"><span>СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА </span>
+								<a class="headerBlock__btn headerBlock__btn--blue link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><span>СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА </span>
 								</a>
 							</div>
 						</div>
@@ -316,72 +288,24 @@
 			</section>
 			<!-- end headerBlock-->
 			<!-- start sForm-->
-			<section class="sForm sForm--js section">
+			<section class="sForm section">
 				<div class="container">
 					<div class="sForm__box-wrap">
 						<div class="sForm__box">
-							<div class="section-title text-center text-md-start">
-								<h2>
-									Заказать ППР на
-									<span class="typed-js" data-txt1="монолитные работы" data-txt2="кровельниe работы" data-txt3="lorem ipsum"></span>
-								</h2>
-							</div>
-							<div class="sForm__search-box">
-								<div class="sForm__input-wrap"><input class="sForm__input form-control sForm-search-js" type="text" name="search" placeholder="Введите свой ППР в поиск"/>
-									<button class="sForm__btn sForm-btn-js" type="button">Найти ППР
-									</button>
+							<div class="sForm__row row">
+								<div class="col-lg-auto">
+									<h3>Расчёт стоимости ОДД за 5 минут <span>бесплатно</span></h3>
 								</div>
-								<div class="sForm__result-row row d-none d-md-flex">
-									<div class="col-auto">
-										<div class="sForm__key">Найдено результатов:
-										</div>
-										<div class="sForm__val sForm-items-found">2
-										</div>
+								<div class="col">
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<button class="form-wrap__btn" type="submit">оставить заявку
+											</button>
+										</form>
 									</div>
-								</div>
-								<div class="sForm__head-row row align-items-center">
-									<div class="sForm__for-col col-md text-center text-md-start">ППР для…
-									</div>
-									<div class="col-md-auto d-none d-md-block">
-										<a class="sForm__show-more" href="#">
-											<svg class="icon icon-reload ">
-												<use xlink:href="img/svg/sprite.svg#reload"></use>
-											</svg><span class="sForm__sm-txt">Показать больше</span>
-										</a>
-									</div>
-								</div>
-								<div class="sForm__items ppr-items-js text-center text-md-start" data-price-from="от 15 000 ₽">
-									<div class="sForm__item">
-										<div class="sForm__i-row row align-items-center">
-											<div class="sForm__i-title col-md">электромонтажных работ
-											</div>
-											<div class="sForm__i-price col-md-auto">от 15 000 ₽
-											</div>
-											<div class="col-md-auto">
-												<a class="sForm__i-btn link-modal-js" href="#modal-price" data-title="электромонтажных работ">Заказать ППр
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="sForm__item">
-										<div class="sForm__i-row row align-items-center">
-											<div class="sForm__i-title col-md">кровельных работ
-											</div>
-											<div class="sForm__i-price col-md-auto">от 15 000 ₽
-											</div>
-											<div class="col-md-auto">
-												<a class="sForm__i-btn link-modal-js" href="#modal-price" data-title="кровельных работ">Заказать ППр
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="text-center d-md-none">
-									<a class="sForm__show-more" href="#">
-										<svg class="icon icon-reload ">
-											<use xlink:href="img/svg/sprite.svg#reload"></use>
-										</svg><span class="sForm__sm-txt">Показать больше</span>
-									</a>
 								</div>
 							</div>
 						</div>
@@ -389,75 +313,89 @@
 				</div>
 			</section>
 			<!-- end sForm-->
-			<!-- start sAlso-->
-			<section class="sAlso section" id="sAlso">
-				<!-- picture-->
-				<picture class="sAlso__bg d-none d-xxl-block">
-					<source type="image/webp" srcset="img/@2x/webp/pin.webp"/><img src="img/@2x/pin.png" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<div class="container">
-					<div class="section-title text-center text-md-start">
-						<h2>Также разрабатываем:</h2>
+			<!-- start sOrganize-->
+			<section class="sOrganize section wow animate__animated animate__fadeIn" id="sOrganize">
+				<div class="sOrganize__container container"><img class="img" src="img/sOrganize-img-1.png" alt=""/>
+					<div class="section-title text-center">
+						<h3><span>Профессионально организуем</span> дорожное движение и&nbsp;получим все погласования &laquo;под ключ&raquo;:</h3>
 					</div>
-					<div class="sAlso__row row">
-						<div class="col-lg-4">
-							<a class="sAlso__item" href="#">
-								<div class="sAlso__i-row row align-items-center flex-nowrap">
-									<div class="col-auto">
-										<!-- picture-->
-										<picture class="sAlso__img">
-											<source type="image/webp" srcset="img/@2x/webp/sAlsoItem-c-1.webp"/><img src="img/@2x/sAlsoItem-c-1.png" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture-->
-									</div>
-									<div class="sAlso__txt-col col">Проекты организации дорожного движения (ПОДД)
-									</div>
+					<div class="sOrganize__row row">
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
 								</div>
-							</a>
+								<p>При прокладке<br>инженерных сетей</p>
+							</div>
 						</div>
-						<div class="col-lg-4">
-							<a class="sAlso__item" href="#">
-								<div class="sAlso__i-row row align-items-center flex-nowrap">
-									<div class="col-auto">
-										<!-- picture-->
-										<picture class="sAlso__img">
-											<source type="image/webp" srcset="img/@2x/webp/sAlsoItem-c-2.webp"/><img src="img/@2x/sAlsoItem-c-2.png" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture-->
-									</div>
-									<div class="sAlso__txt-col col">Проекты организации строительства (ПОС)
-									</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
 								</div>
-							</a>
+								<p>Для АЗС и&nbsp;объектов дорожного сервиса</p>
+							</div>
 						</div>
-						<div class="col-lg-4">
-							<a class="sAlso__item" href="#">
-								<div class="sAlso__i-row row align-items-center flex-nowrap">
-									<div class="col-auto">
-										<!-- picture-->
-										<picture class="sAlso__img">
-											<source type="image/webp" srcset="img/@2x/webp/sAlsoItem-c-3.webp"/><img src="img/@2x/sAlsoItem-c-3.png" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture-->
-									</div>
-									<div class="sAlso__txt-col col">ППР для открытия Ордера ОАТИ (ОАТИ)
-									</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
 								</div>
-							</a>
+								<p>При занятии Проезжей части при производстве работ</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Для жилых комплексов, производственных<br>объектов и&nbsp;частных домов</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>При установке<br>лесов/пешеходной галереи</p>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="sOrganize__item">
+								<div class="sOrganize__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>При строительстве/ реконструкции съездов с дорог</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sAlso-->
+			<!-- end sOrganize-->
 			<!-- start sMade-->
-			<section class="sMade section" id="sMade">
-				<div class="container">
+			<section class="sMade section wow animate__animated animate__fadeIn" id="sMade">
+				<div class="container"> 
+					<!-- picture-->
+					<picture class="bg"><img src="img/@2x/trafficlight.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+					<picture class="bg">
+						<source type="image/webp" srcset="img/@2x/webp/trafficlight.webp"/><img src="img/@2x/trafficlight.png" alt=""/>
+					</picture>
 					<div class="section-title text-center">
-						<h2>
-							Нами разработано
-							<span>4800 ППР с 2006 года</span>
-						</h2>
+						<h2>Примеры наших разработанных и&nbsp;согласованных проектов</h2>
 					</div>
 					<div class="sMade__slider-wrap">
 						<div class="swiper sMade-slider-js">
@@ -467,10 +405,9 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-0">
 														<!-- picture-->
-														<picture class="sMade__img">
-															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
+														<picture class="sMade__img"><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
 														</picture>
 														<!-- /picture-->
 														<div class="sMade__btn-pl">
@@ -509,7 +446,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде 'Проект производства работ  для электромонтажа'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -521,10 +458,9 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-1">
 														<!-- picture-->
-														<picture class="sMade__img">
-															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
+														<picture class="sMade__img"><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
 														</picture>
 														<!-- /picture-->
 														<div class="sMade__btn-pl">
@@ -563,7 +499,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде 'Проект производства работ  для электромонтажа'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -575,10 +511,9 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-2">
 														<!-- picture-->
-														<picture class="sMade__img">
-															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
+														<picture class="sMade__img"><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
 														</picture>
 														<!-- /picture-->
 														<div class="sMade__btn-pl">
@@ -617,7 +552,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде 'Проект производства работ  для электромонтажа'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -629,10 +564,9 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-3">
 														<!-- picture-->
-														<picture class="sMade__img">
-															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
+														<picture class="sMade__img"><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
 														</picture>
 														<!-- /picture-->
 														<div class="sMade__btn-pl">
@@ -671,7 +605,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде 'Проект производства работ  для электромонтажа'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -683,10 +617,9 @@
 										<div class="sMade__item">
 											<div class="sMade__i-row row justify-content-center">
 												<div class="sMade__col sMade__col--img col-md-9 col-lg-6 col-xl-auto">
-													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide">
+													<a class="sMade__link" href="img/@2x/sMadeSlide-1.png" data-fancybox="sMadeSlide-4">
 														<!-- picture-->
-														<picture class="sMade__img">
-															<source type="image/webp" srcset="img/@2x/webp/sMadeSlide-1.webp"/><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
+														<picture class="sMade__img"><img src="img/@2x/sMadeSlide-1.png" alt="" loading="lazy"/>
 														</picture>
 														<!-- /picture-->
 														<div class="sMade__btn-pl">
@@ -725,7 +658,7 @@
 															</div>
 														</div>
 													</div>
-													<a class="sMade__btn" href="#">Узнать стоимость такого ппр
+													<a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде 'Проект производства работ  для электромонтажа'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
 													</a>
 												</div>
 											</div>
@@ -739,23 +672,1027 @@
 				</div>
 			</section>
 			<!-- end sMade-->
-			<!-- start sOpen-->
-			<section class="sOpen sOpen--js section" id="sOpen">
-				<div class="sOpen__container container">
-					<div class="sOpen__bg d-none d-xl-block"><img loading="lazy" src="img/@2x/sOpen-img.png" alt=""/>
+			<!-- start sExamples-->
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn sExamples sExamples--2" id="sExamples">
+				<div class="sExamples__wrapper">
+					<div class="sExamples__container container"><img class="img img--2" src="img/road-sign-1.png" alt=""><img class="img img--3" src="img/road-sign-2.png" alt="">
+						<div class="section-title">
+							<h2><span>Выберите нужный Проект ОДД</span> (Услугу по&nbsp;ОДД и&nbsp;согласованию знаков)</h2>
+						</div>
+						<div class="slider-examples-wrap">
+							<div class="slider-examples slider-examples--js swiper">
+								<div class="swiper-wrapper">
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Установка дорожных знаков
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-1.png" data-fancybox="example-1"><img class="bg-img" src="img/sExamples-bg-1.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1"><img src="img/sExamples-fr-1.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1"><img src="img/sExamples-bk-1.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Установка дорожных знаков&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-2"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проекты ОДД&lt;br&gt;и схемы ОДД&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-3"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-4"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование автомобильных дорог&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-5"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование АСУДД/светофоров&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-6"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-7"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-7"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-7"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проекты ОДД&lt;br&gt;и схемы ОДД&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-8"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-8"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-8"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-8"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-8"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-8"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование автомобильных дорог&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-9"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-9"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-9"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование АСУДД/светофоров&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-10"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-10"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-10"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="control-wrap d-lg-none">
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<a class="sExamples__btn sExamples__btn--blue btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						</a>
 					</div>
+				</div>
+			</section>
+			<!-- end sExamples-->
+			<!-- start sCases-->
+			<section class="sCases showAllWrap section wow animate__animated animate__fadeIn" id="sCases">
+				<div class="sCases__container container"><img class="bg" src="img/sCases-bg-1.png" alt=""/>
+					<div class="section-title text-center">
+						<h3>Примеры наших согласований &laquo;под ключ&raquo;</h3>
+					</div>
+					<div class="sCases__row row">
+						<div class="col-lg-4">
+							<div class="sCases__item"><img class="img--1" src="img/sCases-img-1.png" alt=""/>
+								<div class="sCases__title"> <span>16</span>лет
+								</div>
+								<p>Согласовываем проекты более 16 лет</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sCases__item"><img class="img--2" src="img/sCases-img-2.png" alt=""/>
+								<div class="sCases__title"> <span>100</span>%
+								</div>
+								<p>Гарантия согласования с необходимыми службами</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sCases__item"><img class="img--3" src="img/sCases-img-3.png" alt=""/>
+								<div class="sCases__title"> <span>142</span>
+								</div>
+								<p>Постоянных<br>и довольных клиента</p>
+							</div>
+						</div>
+					</div>
+					<div class="sCases__slider default-slider default-slider--js swiper">
+						<div class="swiper-wrapper">
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-0"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-1"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-2"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-3"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+								<div class="sCases__slide swiper-slide">
+									<a class="sCases__img-wrap" href="img/sCases-slide-lg-1.jpg" data-fancybox="sCases-slide-4"><img src="img/sCases-slide-1.jpg" alt=""/>
+										<div class="sCases__icon-wrap">
+											<svg class="icon icon-zoom-pl ">
+												<use xlink:href="img/svg/sprite.svg#zoom-pl"></use>
+											</svg>
+										</div>
+									</a>
+									<p>Согласование<br>светофора с Мосавтодор</p>
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<a class="sCases__btn btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+					</a>
+				</div>
+			</section>
+			<!-- end sCases-->
+			<!-- start sStandards-->
+			<section class="sStandards section wow animate__animated animate__fadeIn" id="sStandards">
+				<div class="sStandards__container container">
 					<div class="section-title">
-						<p>О компании «С-Проджект»</p>
-						<h2>
-							Мы открылись не «вчера» и
-							<span>не закроемся «завтра»</span>
-							— поэтому нам доверяют
-						</h2>
-						<p>Работаем с 2006 года, что подтверждается сертификатами, полученными в этот период. Разработали ППР и ППРк для известных компаний, среди которых: «Мерседес», «Сбербанк», «Аэрофлот» и еще порядка 20 топовых брендов. Не стремимся работать только с лидерами рынка, просто за 15 лет нас сложно было не заметить и не прийти к нам. Если вы из малого и среднего бизнеса, то вас мы ждем не меньше — наши цены вам понравятся.</p>
-						<p>Вам стоит выбрать нас, потому что мы гарантируем вам ППР и ППРк, сделанный по строительным стандартам. Мы будем работать над вашим ППР до полного утверждения. Компания, к результатам работы которой у вас не будет вопросов — это мы.</p>
+						<h2>Проект ОДД по <span>стандартам</span></h2>
 					</div>
-					<div class="sOpen__cert-title"><span>Лицензии</span>
-						на осуществление деятельности, начиная с дня основания и по сегодняшний день
+					<div class="sStandards__row row">
+						<div class="col-md-6">
+							<div class="sStandards__item">
+								<div class="sStandards__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Проектируем и&nbsp;согласовываем ОДД с&nbsp;2006&nbsp;г.&nbsp;с&nbsp;одним ИНН и&nbsp;номером телефона</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="sStandards__item">
+								<div class="sStandards__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Поможем с&nbsp;согласованием проекта во&nbsp;всех необходимых инстанциях</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="sStandards__item">
+								<div class="sStandards__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Оказываем полную поддержку в&nbsp;процессе создания плана и&nbsp;его согласования</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="sStandards__item">
+								<div class="sStandards__icon-wrap">
+									<svg class="icon icon-check ">
+										<use xlink:href="img/svg/sprite.svg#check"></use>
+									</svg>
+								</div>
+								<p>Сроки разработки и&nbsp;согласования проекта от&nbsp;2-х дней с&nbsp;гарантией под ключ</p>
+							</div>
+						</div>
+						<div class="col-12">
+							<a class="sStandards__btn btn-green link-modal-js" href="#modal-call" data-order="Вызов модалки по кнопке 'Заказать ОДД по  стандартам'" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать ОДД по  стандартам
+							</a>
+						</div>
+					</div>
+					<picture class="img">
+						<source media="(max-width:991px)" srcset="img/sStandards-img-2.png" alt=""/><img class="img" src="img/sStandards-img-1.png" alt=""/>
+					</picture><img class="bg" src="img/sStandards-bg-1.png" alt=""/>
+				</div>
+			</section>
+			<!-- end sStandards-->
+			<!-- start sExamples-->
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn" id="sExamples">
+				<div class="sExamples__wrapper">
+					<div class="sExamples__container container"><img class="img" src="img/straight-sign.png" alt="">
+						<div class="section-title"><span class="d-none d-sm-block">Разработанные нами проекты ОДД (Услуги по&nbsp;ОДД и&nbsp;согласованию знаков)</span>
+							<h2>Помимо согласованного проекта организации дорожного движения (ПОДД), Вы&nbsp;можете заказать:</h2>
+						</div>
+						<div class="slider-examples-wrap">
+							<div class="slider-examples slider-examples--js swiper">
+								<div class="swiper-wrapper">
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Установка дорожных знаков
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-1.png" data-fancybox="example-1"><img class="bg-img" src="img/sExamples-bg-1.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1"><img src="img/sExamples-fr-1.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1"><img src="img/sExamples-bk-1.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Установка дорожных знаков&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-2"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-2"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-2"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проекты ОДД&lt;br&gt;и схемы ОДД&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-3"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-3"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-3"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-4"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-4"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-4"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование автомобильных дорог&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-5"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-5"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-5"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование АСУДД/светофоров&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-6"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-6"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-6"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проекты ОДД<br>и схемы ОДД
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-2.png" data-fancybox="example-7"><img class="bg-img" src="img/sExamples-bg-2.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-2.png" data-fancybox="example-7"><img src="img/sExamples-fr-2.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-2.png" data-fancybox="example-7"><img src="img/sExamples-bk-2.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проекты ОДД&lt;br&gt;и схемы ОДД&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-3.png" data-fancybox="example-8"><img class="bg-img" src="img/sExamples-bg-3.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-3.png" data-fancybox="example-8"><img src="img/sExamples-fr-3.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-3.png" data-fancybox="example-8"><img src="img/sExamples-bk-3.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование автомобильных дорог
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-4.png" data-fancybox="example-8"><img class="bg-img" src="img/sExamples-bg-4.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-4.png" data-fancybox="example-8"><img src="img/sExamples-fr-4.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-4.png" data-fancybox="example-8"><img src="img/sExamples-bk-4.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование автомобильных дорог&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Проектирование АСУДД/светофоров
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-5.png" data-fancybox="example-9"><img class="bg-img" src="img/sExamples-bg-5.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-5.png" data-fancybox="example-9"><img src="img/sExamples-fr-5.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-5.png" data-fancybox="example-9"><img src="img/sExamples-bk-5.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование АСУДД/светофоров&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+									<div class="slider-examples__slide hidden-slide swiper-slide">
+										<div class="sExamples-item">
+											<div class="sExamples-item__title">Нанесение дорожной разметки
+											</div>
+											<div class="toggle-wrap">
+												<p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+												<div class="toggle-block">
+													<p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+													<ul>
+														<li>Наши специалисты бесплатно посетят Ваш объект</li>
+														<li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+														<li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+														<li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+														<li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+													</ul>
+												</div>
+											</div>
+											<p>Пример проекта</p>
+											<div class="sExamples-item__images-block"><a href="img/sExamples-bg-6.png" data-fancybox="example-10"><img class="bg-img" src="img/sExamples-bg-6.png" alt=""/></a>
+												<a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-6.png" data-fancybox="example-10"><img src="img/sExamples-fr-6.png" alt=""/>
+												</a>
+												<a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-6.png" data-fancybox="example-10"><img src="img/sExamples-bk-6.png" alt=""/>
+												</a>
+											</div>
+											<div class="sExamples-item__footer">
+												<div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+												</div><a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Нанесение дорожной разметки&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="control-wrap d-lg-none">
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<a class="sExamples__btn btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- end sExamples-->
+			<!-- start sWhatWeDo-->
+			<section class="sWhatWeDo section wow animate__animated animate__fadeIn" id="sWhatWeDo">
+				<div class="sWhatWeDo__container container"><img class="img" src="img/parking-sign.png" alt=""/>
+					<div class="section-title text-center">
+						<div class="section-title__headline">Дополнительные услуги
+						</div>
+						<h2>Так же <span>мы разрабатываем:</span></h2>
+					</div>
+					<div class="sWhatWeDo__slider default-slider default-slider--js swiper">
+						<div class="swiper-wrapper">
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-1.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">ПОДД
+									</div>
+									<p>Проекты организации дорожного движения</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;ПОДД&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-2.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">ПОС
+									</div>
+									<p>Проекты организации строительства</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;ПОС&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-3.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">ППР
+									</div>
+									<p>Проекты производства работ</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;ППР&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-4.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">Проектирование дорог
+									</div>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;Проектирование дорог&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-5.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">Разработка ППРк
+									</div>
+									<p>Проекты производства работ кранами</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;Разработка ППРк&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-6.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">Обследование зданий
+									</div>
+									<p>Строительных конструкций или сооружений</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;Обследование зданий&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-7.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">ОАТИ
+									</div>
+									<p>Оформление разрешительных документов на производство работ</p>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;ОАТИ&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+								<div class="sWhatWeDo__slide swiper-slide bg-wrap">
+									<div class="sWhatWeDo__img-wrap picture-bg"><img src="img/sWhatWeDo-bg-8.jpg" alt=""/>
+									</div>
+									<div class="sWhatWeDo__title">Разработка транспортных схем
+									</div>
+									<a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по &quot;Разработка транспортных схем&quot;" data-pic="img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+									</a>
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sWhatWeDo-->
+			<!-- start sCoordinate-->
+			<section class="sCoordinate section wow animate__animated animate__fadeIn bg-wrap" id="sCoordinate"><img class="picture-bg" src="img/sCoordinate-bg-1.png" alt="" loading="lazy"/>
+				<div class="sCoordinate__container container"><img class="bg" src="img/sCoordinate-bg-2.png" alt=""/>
+					<div class="section-title text-center">
+						<div class="section-title__headline">Согласование с гарантией, прописанной в договоре
+						</div>
+						<h2>Мы сами согласуем ваш проект:</h2>
+					</div>
+					<div class="sCoordinate__slider default-slider default-slider--js swiper">
+						<div class="swiper-wrapper">
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-1.png" alt=""/>
+									<p>Департамент транспорта Москвы</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-2.png" alt=""/>
+									<p>Центр организации дорожного движения</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-3.png" alt=""/>
+									<p>ГУП Мосгортранс</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-4.png" alt=""/>
+									<p>ФСО России</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-5.png" alt=""/>
+									<p>ГБУ Мосавтодор</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-6.png" alt=""/>
+									<p>Федеральное дорожное агентство</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-7.png" alt=""/>
+									<p>Органы местного управления</p>
+								</div>
+								<div class="sCoordinate__slide swiper-slide bg-wrap"><img src="img/sCoordinate-img-8.png" alt=""/>
+									<p>ГИБДД</p>
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCoordinate-->
+			<section class="sOpen sOpen--2 sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
+				<div class="sOpen__container container">
+					<div class="section-title section-title--2 text-center">
+						<h2><span>Отзывы постоянных клиентов</span> о&nbsp;наших работах</h2>
 					</div>
 					<div class="sOpen__slider-wrap">
 						<div class="swiper sOpen-slider-js">
@@ -819,19 +1756,26 @@
 				</div>
 			</section>
 			<!-- end sOpen-->
-			<!-- start sFeedback-->
-			<section class="sFeedback sFeedback--js section" id="sFeedback">
-				<!-- picture-->
-				<picture class="sFeedback__bg">
-					<source type="image/webp" srcset="img/@2x/webp/sFeedback-bg.webp"/><img src="img/@2x/sFeedback-bg.png" alt="" loading="lazy"/>
-				</picture>
-				<!-- /picture-->
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>Отзывы клиентов на&#160;бланках</h2>
+			<!-- start sOpen-->
+			<section class="sOpen sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
+				<div class="sOpen__container container">
+					<div class="sOpen__bg d-none d-xl-block"><img src="img/@2x/sOpen-img.png" alt=""/>
+					</div>
+					<div class="section-title">
+						<p>О компании «С-Проджект»</p>
+						<h2>
+							Мы открылись не «вчера» и
+							<span>не закроемся «завтра»</span>
+							— поэтому нам доверяют
+						</h2>
+						<p>Мы&nbsp;готовы предложить вам разработку проектов дорожного движения и&nbsp;согласование ваших проектов под полным сопровождением по&nbsp;приятным ценам. Наши сроки вам понравятся! От&nbsp;2-х рабочих дней + даем гарантию согласования проекта.</p>
+						<p>Более 16-ти лет мы&nbsp;оказываем услуги по&nbsp;разработке и&nbsp;согласованию Проектов организации дорожного движения (ПОДД), Схем организации дорожного движения, Проектов дорог, примыканий, АСУДД для Москвы, Санкт-Петербурга и&nbsp;других регионов России.</p>
+						<p>А&nbsp;так&nbsp;же бесплатно доставим проект вам в&nbsp;любое удобное для Вас место!</p>
+					</div>
+					<div class="sOpen__cert-title">Сертификаты и СРО
 					</div>
 					<div class="sOpen__slider-wrap">
-						<div class="swiper sFeedback-slider-js">
+						<div class="swiper sOpen-slider-js">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="sOpen__card-wrap">
@@ -891,11 +1835,70 @@
 					</div>
 				</div>
 			</section>
-			<!-- end sFeedback-->
+			<!-- end sOpen-->
+			<!-- start sOrder-->
+			<section class="sOrder section wow animate__animated animate__fadeIn">
+				<div class="sOrder__container container"><img class="img img--1" src="img/sOrder-img-1.jpg" alt=""/><img class="img img--2" src="img/sOrder-img-2.png" alt=""/>
+					<div class="sOrder__row row">
+						<div class="col-lg-7">
+							<div class="section-title text-center text-lg-start">
+								<h2>
+									Бесплатная
+									<span>консультация и расчет</span>
+									цены по телефону
+								</h2>
+							</div>
+							<div class="sOrder__items">
+								<div class="sOrder__item"><img src="img/svg/sOrder-img-1.svg" alt="" loading="lazy"/><span>16</span>
+									<p>Лет работы</p>
+								</div>
+								<div class="sOrder__item"><img src="img/svg/sOrder-img-2.svg" alt="" loading="lazy"/><span>1215</span>
+									<p>Сделанных проекта ОДД</p>
+								</div>
+								<div class="sOrder__item"><img src="img/svg/sOrder-img-3.svg" alt="" loading="lazy"/><span>100%</span>
+									<p>Гарантия согласования</p>
+								</div>
+								<div class="sOrder__item"><img src="img/svg/sOrder-img-4.svg" alt="" loading="lazy"/><span>142</span>
+									<p>Довольных клиента</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__box">
+										<div class="text-center">
+											<div class="form-wrap__title">
+												Перезвоним через
+												<span>5–7 минут</span>
+											</div>
+											<div class="form-wrap__sm-txt">Заполните форму:
+											</div>
+										</div>
+										<div class="form-wrap__inputs">
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Какой ППР вам нужен?"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="На какой телефон перезвонить?"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Как вас зовут?"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<button class="form-wrap__btn" type="submit">Заказать ппр со скидкой 15%
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sOrder-->
 			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
-				<div class="sContact__map d-none d-md-block">
-					<div class="make-yandex-lazy-js" data-src="&lt;script async src=&quot;https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;amp;width=1080&amp;amp;height=518&amp;amp;lang=ru_RU&amp;amp;scroll=false&quot;&gt;&lt;/script&gt;"></div>
+			<section class="sContact section wow animate__animated animate__fadeIn" id="sContact">
+				<div class="sContact__map d-none d-md-block"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.088423547606!2d37.63058461608619!3d55.67006250583753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab344c31986e3%3A0xcb8adfb029a3f2ae!2sKhlebozavodskiy%20Proyezd%2C%207%D1%819%2C%20Moskva%2C%20Russia%2C%20115230!5e0!3m2!1sen!2slv!4v1668770781279!5m2!1sen!2slv" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="sContact__container container">
 					<div class="sContact__box-wrap">
@@ -915,7 +1918,7 @@
 							</a>
 							<div class="sContact__title">Адрес офиса:
 							</div>
-							<div class="sContact__txt sContact__txt--address">Москва, Алтуфьевское шоссе, дом 48, корпус 1
+							<div class="sContact__txt sContact__txt--address">Москва, Хлебозаводский пр. 7с9
 							</div>
 						</div>
 					</div>
@@ -929,9 +1932,36 @@
 							<a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo-new.svg" alt=""/><span>С-проджект</span>
 							</a>
 						</div>
-						<div class="col-md">
+						<div class="col-md d-none d-md-block">
 							<div class="footer__txt">Разработка и согласование проектов производственных работ для строительства
 							</div>
+						</div>
+						<div class="col-auto">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #00E676 0%, #00A454 100%);">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #35AADA 0%, #1D91C2 100%);">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #4D76A1 0%, #0E4C8D 100%);">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="col-auto d-none d-md-block">
+							<a class="footer__tel" href="tel:+74959713971">+7 (495) 971-39-71
+							</a>
+						</div>
+						<div class="col-auto d-none d-md-block">
+							<a class="footer__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
+							</a>
 						</div>
 						<div class="footer__policy-col col-md-auto"><a href="#">Политика конфиденциальности</a>
 						</div>
@@ -945,10 +1975,10 @@
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
 						<div class="modal-win__title">
-							Рассчитайте стоимость проекта
+							Рассчитайте стоимость проекта ОДД
 							<span>за 1 минуту</span>
 						</div>
-						<p>Выберите вид ППР для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
+						<p>Выберите вид ОДД для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
 					</div>
 					<div class="form-wrap">
 						<form>
@@ -965,8 +1995,7 @@
 								</div>
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
 								</div>
-								<button class="form-wrap__btn form-wrap__btn--calc" type="submit">Рассчитать стоимость
-									<!--img(loading="lazy" src="img/svg/calc.svg" alt="")-->
+								<button class="form-wrap__btn form-wrap__btn--calc" type="submit"> <img loading="lazy" src="img/svg/calc.svg" alt=""/>Рассчитать стоимость
 								</button>
 							</div>
 							<div class="form-wrap__policy">
@@ -978,8 +2007,7 @@
 				</div>
 				<div class="col-lg">
 					<!-- picture-->
-					<picture class="modal-win__paper">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-1.webp"/><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
+					<picture class="modal-win__paper"><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
@@ -990,21 +2018,19 @@
 			<div class="modal-win__row row gy-4">
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
-						<div class="modal-win__title">Мы перезвоним!
+						<div class="modal-win__title modal-win__title--js">
 						</div>
 						<p>Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.</p>
 					</div>
 					<div class="form-wrap">
 						<form>
-							<input class="title-js" type="hidden" value="" name="title"/>
-							<input class="price-js" type="hidden" value="" name="price"/>
 							<div class="form-wrap__inputs">
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--user"><input class="form-wrap__input form-wrap__input--name form-control" type="text" placeholder="Ваше имя" name="name"/>
 								</div>
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
 									<!--/img(loading="lazy" src="img/svg/modal-tel.svg" alt="")-->
 								</div>
-								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый ППР</span>
+								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый проект ОДД</span>
 								</button>
 							</div>
 							<div class="form-wrap__policy">
@@ -1016,50 +2042,13 @@
 				</div>
 				<div class="col-lg">
 					<!-- picture-->
-					<picture class="modal-win__paper">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-2.webp"/><img src="img/@2x/modal-paper-2.png" alt="" loading="lazy"/>
+					<picture class="modal-win__paper"><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
 			</div>
 		</div>
 		<!---->
-		<div class="modal-win" id="modal-price" style="display: none">
-			<div class="modal-win__row row gy-4">
-				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
-					<div class="modal-win__title-bl">
-						<div class="modal-win__title">Узнать стоимость такого ППР
-						</div>
-						<p>Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.</p>
-					</div>
-					<div class="form-wrap">
-						<form>
-							<input class="title-js" type="hidden" value="" name="title"/>
-							<input class="price-js" type="hidden" value="" name="price"/>
-							<div class="form-wrap__inputs">
-								<div class="form-wrap__input-wrap"><input class="form-wrap__input form-wrap__input--name form-control" type="tel" placeholder="Ваше имя" name="tel"/><img loading="lazy" src="img/svg/modal-user.svg" alt=""/>
-								</div>
-								<div class="form-wrap__input-wrap"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/><img loading="lazy" src="img/svg/modal-tel.svg" alt=""/>
-								</div>
-								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый ППР</span>
-								</button>
-							</div>
-							<div class="form-wrap__policy">
-								Нажимая на кнопку вы соглашаетесь с
-								<a href="#">политикой конфиденциальности</a>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="col-lg">
-					<!-- picture-->
-					<picture class="modal-win__paper ">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-3.webp"/><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
-					</picture>
-					<!-- /picture-->
-				</div>
-			</div>
-		</div>
 		<!---->
 		<div class="m-thanks modal-win" id="modal-thanks" style="display: none">
 			<div class="text-center">
@@ -1077,6 +2066,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/typed.js/lib/typed.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

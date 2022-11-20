@@ -196,7 +196,7 @@
 <?php wp_footer(); ?>
 
 <!-- jivosite -->
-<script src="//code.jivosite.com/widget/p2PpkrwbPR" async></script>
+<!-- <script src="//code.jivosite.com/widget/p2PpkrwbPR" async></script> -->
 <!-- /jivosite -->
 
   </body>

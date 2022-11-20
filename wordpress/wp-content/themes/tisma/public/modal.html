@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -32,10 +33,10 @@
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
 						<div class="modal-win__title">
-							Рассчитайте стоимость проекта
+							Рассчитайте стоимость проекта ОДД
 							<span>за 1 минуту</span>
 						</div>
-						<p>Выберите вид ППР для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
+						<p>Выберите вид ОДД для любого вида строительных работ, менеджер перзвонит вам для уточнения деталей, покажет реализованыее проекты и рассчитает стоимость.</p>
 					</div>
 					<div class="form-wrap">
 						<form>
@@ -52,8 +53,7 @@
 								</div>
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
 								</div>
-								<button class="form-wrap__btn form-wrap__btn--calc" type="submit">Рассчитать стоимость
-									<!--img(loading="lazy" src="img/svg/calc.svg" alt="")-->
+								<button class="form-wrap__btn form-wrap__btn--calc" type="submit"> <img loading="lazy" src="img/svg/calc.svg" alt=""/>Рассчитать стоимость
 								</button>
 							</div>
 							<div class="form-wrap__policy">
@@ -65,8 +65,7 @@
 				</div>
 				<div class="col-lg">
 					<!-- picture-->
-					<picture class="modal-win__paper">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-1.webp"/><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
+					<picture class="modal-win__paper"><img src="img/@2x/modal-paper-1.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
@@ -77,21 +76,19 @@
 			<div class="modal-win__row row gy-4">
 				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
 					<div class="modal-win__title-bl">
-						<div class="modal-win__title">Мы перезвоним!
+						<div class="modal-win__title modal-win__title--js">
 						</div>
 						<p>Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.</p>
 					</div>
 					<div class="form-wrap">
 						<form>
-							<input class="title-js" type="hidden" value="" name="title"/>
-							<input class="price-js" type="hidden" value="" name="price"/>
 							<div class="form-wrap__inputs">
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--user"><input class="form-wrap__input form-wrap__input--name form-control" type="text" placeholder="Ваше имя" name="name"/>
 								</div>
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
 									<!--/img(loading="lazy" src="img/svg/modal-tel.svg" alt="")-->
 								</div>
-								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый ППР</span>
+								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый проект ОДД</span>
 								</button>
 							</div>
 							<div class="form-wrap__policy">
@@ -103,50 +100,13 @@
 				</div>
 				<div class="col-lg">
 					<!-- picture-->
-					<picture class="modal-win__paper">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-2.webp"/><img src="img/@2x/modal-paper-2.png" alt="" loading="lazy"/>
+					<picture class="modal-win__paper"><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
 				</div>
 			</div>
 		</div>
 		<!---->
-		<div class="modal-win" id="modal-price" style="display: none">
-			<div class="modal-win__row row gy-4">
-				<div class="modal-win__col modal-win__col--title col-lg-auto text-center text-lg-start">
-					<div class="modal-win__title-bl">
-						<div class="modal-win__title">Узнать стоимость такого ППР
-						</div>
-						<p>Оставьте зявку, мы свяжемся с вами в течении одной минуты и проконсультируем по всем интересующим вопросам.</p>
-					</div>
-					<div class="form-wrap">
-						<form>
-							<input class="title-js" type="hidden" value="" name="title"/>
-							<input class="price-js" type="hidden" value="" name="price"/>
-							<div class="form-wrap__inputs">
-								<div class="form-wrap__input-wrap"><input class="form-wrap__input form-wrap__input--name form-control" type="tel" placeholder="Ваше имя" name="tel"/><img loading="lazy" src="img/svg/modal-user.svg" alt=""/>
-								</div>
-								<div class="form-wrap__input-wrap"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/><img loading="lazy" src="img/svg/modal-tel.svg" alt=""/>
-								</div>
-								<button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый ППР</span>
-								</button>
-							</div>
-							<div class="form-wrap__policy">
-								Нажимая на кнопку вы соглашаетесь с
-								<a href="#">политикой конфиденциальности</a>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="col-lg">
-					<!-- picture-->
-					<picture class="modal-win__paper ">
-						<source type="image/webp" srcset="img/@2x/webp/modal-paper-3.webp"/><img src="img/@2x/modal-paper-3.png" alt="" loading="lazy"/>
-					</picture>
-					<!-- /picture-->
-				</div>
-			</div>
-		</div>
 		<!---->
 		<div class="m-thanks modal-win" id="modal-thanks" style="display: none">
 			<div class="text-center">
@@ -164,6 +124,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/typed.js/lib/typed.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

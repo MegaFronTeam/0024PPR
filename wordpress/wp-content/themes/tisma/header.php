@@ -24,47 +24,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 
-    <!-- Yandex.Metrika counter 2 -->
-    <script type="text/javascript" >
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(50042227, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true,
-        trackHash:true
-      });
-
-
-      // setTimeout(() => {
-      //   ym(50042227, 'getClientID', function (clientID) {
-      //     $('[name="form_fields[field_f985c0d]"], [name="form_fields[field_f985c0d]"], .elementor-field-type-hidden input ').each(function () {
-      //       $(this).val(clientID);
-      //       console.log(clientID)
-      //     })
-      //
-      //   }, 1000);
-      //
-      //   $(document).on('click', "a.elementor-button-link", function(){
-      //     let id  = $(this).attr('href')
-      //     setTimeout(() => {
-      //       ym(50042227, 'getClientID', function (clientID) {
-      //         console.log(clientID)
-      //         $('[name="form_fields[field_f985c0d]"], [name="form_fields[field_f985c0d]"], .elementor-field-type-hidden input ').each(function () {
-      //           $(this).val(clientID);
-      //         })
-      //       })
-      //
-      //     }, 500);
-      //
-      //   })
-      // });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/50042227" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter 2 -->
 </head>
 <body <?php body_class(); ?>>
 <?php
@@ -88,6 +47,75 @@
   );
 ?>
 <div class="main-wrapper">
+  <div class="menu-mobile menu-mobile--js d-lg-none">
+    <div class="menu-mobile__inner">
+      <div class="menu-mobile__top-row row align-items-center">
+        <div class="col">
+          <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+          </div>
+        </div>
+        <div class="col-auto">
+          <a class="menu-mobile__logo" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+          </a>
+        </div>
+        <div class="col text-end">
+          <a class="menu-mobile__wa-btn ms-auto" href="#"><img loading="lazy" src="img/svg/wa.svg" alt=""/>
+          </a>
+        </div>
+      </div>
+      <UL class="menu">
+        <li><a href="#">Гарантии</a></li>
+        <li><a href="#">Услуги по ОДД</a></li>
+        <li><a href="#">Согласования</a></li>
+        <li><a href="#">Отзывы о нас</a></li>
+        <li><a href="#">Наши объекты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Контакты</a></li>
+      </UL>
+      <a class="menu-mobile__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Обратный звонок
+      </a>
+      <div class="menu-mobile__tell-row row justify-content-between">
+        <div class="col-auto">
+          <a class="menu-mobile__link menu-mobile__link--mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
+          </a>
+        </div>
+        <div class="col-auto">
+          <a class="menu-mobile__link menu-mobile__link--tell" href="telto:+74959713971">+7 (495) 971-39-71
+          </a>
+        </div>
+      </div>
+      <div class="menu-mobile__footer">
+        <div class="top-nav__since-row row">
+          <div class="col-auto">
+            <div class="top-nav__flag">4,8
+            </div>
+          </div>
+          <div class="col">
+            <div class="top-nav__stars">
+              <svg class="icon icon-star ">
+                <use xlink:href="img/svg/sprite.svg#star"></use>
+              </svg>
+              <svg class="icon icon-star ">
+                <use xlink:href="img/svg/sprite.svg#star"></use>
+              </svg>
+              <svg class="icon icon-star ">
+                <use xlink:href="img/svg/sprite.svg#star"></use>
+              </svg>
+              <svg class="icon icon-star ">
+                <use xlink:href="img/svg/sprite.svg#star"></use>
+              </svg>
+              <svg class="icon icon-star ">
+                <use xlink:href="img/svg/sprite.svg#star"></use>
+              </svg>
+            </div>
+            <div class="top-nav__s-txt"><b>Работаем с 2006 года.</b>
+              Рейтинг на основании 180 отзывов
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--  мобильное меню-->
   <!-- start header-->
   <header class="header header--js" id="header">
@@ -95,85 +123,63 @@
     <div class="top-nav block-with-lazy">
       <div class="container-lg">
         <div class="top-nav__row row align-items-center flex-nowrap">
-          <div class="col-auto">
-            <a class="top-nav__logo" href="/">
-              <img loading="lazy" src="<?php echo get_field('лого_картинка', 'option');?>" alt=""/>
-              <span>
-                <?php echo get_field('лого_текст', 'option');?>
-              </span>
+          <div class="col-auto d-flex align-items-center">
+            <a class="top-nav__logo" href="/"><img loading="lazy" src="img/svg/logo-new.svg" alt=""/><span>С-проджект</span>
             </a>
-          </div>
-          <div class="col-auto align-self-start">
-            <div class="top-nav__since-row row">
-              <div class="col-auto">
-                <div class="top-nav__flag">
-                  <?php echo get_field('оценка_флаг0', 'option'); ?>
-                </div>
-              </div>
-              <div class="col">
-                <div class="top-nav__stars">
-                  <?php for ($i = 1; $i <= get_field('сложность0', 'option'); $i++) {?>
-                    <svg class="icon icon-star ">
-                      <use xlink:href="<?php echo $get_template_directory_uri ?>/public/img/svg/sprite.svg#star"></use>
-                    </svg>
-                  <?php } ?>
-                </div>
-                <div class="top-nav__s-txt">
-                  <?php echo get_field('текст_флаг0', 'option');?>
-                </div>
-              </div>
+            <div class="top-nav__text">Проектирование<br>и согласование организации дорожного движения
             </div>
           </div>
-          <div class="col-auto d-none d-lg-block">
+          <div class="col-auto col-lg d-none d-lg-block">
             <a class="top-nav__ball-row row scroll-link" href="#sContact">
               <div class="col-auto">
-                <div class="top-nav__ball">
-                  <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/location.svg" alt=""/>
+                <div class="top-nav__ball"><img loading="lazy" src="img/svg/location.svg" alt=""/>
                 </div>
               </div>
               <div class="col">
-                <div class="top-nav__txt">
-                  <?php echo get_field('адрес00', 'option');?>
+                <div class="top-nav__txt">Москва, Алтуфьевское ш., д. 48, корп. 1
                 </div>
               </div>
             </a>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <div class="top-nav__ball-row row">
-              <div class="col-auto">
-                <div class="top-nav__ball"><img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/clock.svg" alt=""/>
-                </div>
-              </div>
-              <div class="col">
-                <div class="top-nav__txt">
-                  <?php echo get_field('режим_работы00', 'option');?>
-                </div>
-              </div>
+            <div class="soc">
+              <a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #00E676 0%, #00A454 100%);">
+                <svg class="icon icon-whatsapp ">
+                  <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                </svg>
+              </a>
+              <a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #35AADA 0%, #1D91C2 100%);">
+                <svg class="icon icon-telegram ">
+                  <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <a class="soc__item" href="#" target="_blank" style="--bgColor: linear-gradient(180deg, #4D76A1 0%, #0E4C8D 100%);">
+                <svg class="icon icon-vk ">
+                  <use xlink:href="img/svg/sprite.svg#vk"></use>
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="col text-end d-none d-sm-block">
-            <a class="top-nav__mail" href="<?php echo $mail_href;?>">
-              <?php echo $mail;?>
+          <div class="col col-lg-auto text-end">
+            <a class="top-nav__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
             </a>
             <div>
-              <a class="top-nav__tell" href="<?php echo $tel_href;?>" onclick="yaCounter50042227.reachGoal('telefon')">
-                <?php echo $tel;?>
+              <a class="top-nav__tell" href="telto:+74959713971">+7 (495) 971-39-71
               </a>
             </div>
           </div>
           <div class="col-auto d-none d-md-block">
-            <a class="top-nav__callback-btn link-modal-js btn-animate" href="#modal-call">Обратный звонок</a>
+            <a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
+            </a>
           </div>
-          <div class="col-auto d-md-none ms-auto">
+          <div class="col-auto d-lg-none ms-auto">
             <div class="row gx-1">
               <div class="col-auto">
-                <a class="top-nav__wa-btn" href="<?php echo $tel_href;?>" onclick="yaCounter50042227.reachGoal('telefon')">
-                  <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/tell-blue.svg" alt=""/>
+                <a class="top-nav__wa-btn" href="#"><img loading="lazy" src="img/svg/wa-icon.svg" alt=""/>
                 </a>
               </div>
               <div class="col-auto">
-                <a class="top-nav__wa-btn" href="<?php echo $tel_wa_href;?>">
-                  <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/wa2.svg" alt=""/>
+                <a class="top-nav__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
                 </a>
               </div>
             </div>
@@ -186,9 +192,17 @@
     <div class="topLine" id="topLine">
       <div class="container-lg">
         <div class="menu">
-          <?php
-            wp_nav_menu($menu_args);
-          ?>
+          <div class="swiper menu-slide-js">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide"><a href="#">Гарантии</a></li>
+              <li class="swiper-slide"><a href="#">Услуги по ОДД</a></li>
+              <li class="swiper-slide"><a href="#">Согласования</a></li>
+              <li class="swiper-slide"><a href="#">Отзывы о нас</a></li>
+              <li class="swiper-slide"><a href="#">Наши объекты</a></li>
+              <li class="swiper-slide"><a href="#">О компании</a></li>
+              <li class="swiper-slide"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -196,42 +210,46 @@
       <div class="container-lg">
         <div class="fixed-line__row row align-items-center gy-3">
           <div class="col d-lg-none">
-            <a class="fixed-line__logo" href="/">
-              <img loading="lazy" src="<?php echo get_field('лого_картинка', 'option');?>" alt=""/>
-              <span>
-                <?php echo get_field('лого_текст', 'option');?>
-              </span>
+            <a class="fixed-line__logo" href="/"><img loading="lazy" src="img/svg/logo-new.svg" alt=""/><span>С-проджект</span>
             </a>
           </div>
           <div class="col-lg order-lg-0 order-last">
             <div class="menu">
-              <?php
-                wp_nav_menu($menu_args);
-              ?>
+              <div class="swiper menu-slide-js">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><a href="#">Гарантии</a></li>
+                  <li class="swiper-slide"><a href="#">Услуги по ОДД</a></li>
+                  <li class="swiper-slide"><a href="#">Согласования</a></li>
+                  <li class="swiper-slide"><a href="#">Отзывы о нас</a></li>
+                  <li class="swiper-slide"><a href="#">Наши объекты</a></li>
+                  <li class="swiper-slide"><a href="#">О компании</a></li>
+                  <li class="swiper-slide"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="fixed-line__mail-col col-auto text-end">
-            <a class="fixed-line__mail" href="<?php echo $mail_href;?>">
-              <?php echo $mail;?>
-            </a>
             <div>
-              <a class="fixed-line__tell" href="<?php echo $tel_href;?>" onclick="yaCounter50042227.reachGoal('telefon')">
-                <?php echo $tel;?>
+              <a class="fixed-line__tell" href="telto:+74959713971">+7 (495) 971-39-71
               </a>
             </div>
+            <a class="fixed-line__mail" href="mailto:mail@orgdoc.ru">mail@orgdoc.ru
+            </a>
           </div>
           <div class="col-auto d-lg-none">
             <div class="row gx-1">
               <div class="col-auto">
-                <a class="fixed-line__wa-btn btn-animate" href="<?php echo $tel_wa_href;?>">
-                  <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/wa2.svg" alt=""/>
+                <a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/wa-icon.svg" alt=""/>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
                 </a>
               </div>
             </div>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call">
-              Обратный звонок
+            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
             </a>
           </div>
         </div>
@@ -239,4 +257,3 @@
     </div>
     <!-- end topLine-->
   </header>
-  <!-- end header-->

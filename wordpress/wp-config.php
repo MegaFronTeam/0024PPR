@@ -2,9 +2,9 @@
 /**
  * Основные параметры WordPress.
  *
- * Скрипт для создания wp-config.php использует этот файл в процессе
- * установки. Необязательно использовать веб-интерфейс, можно
- * скопировать файл в "wp-config.php" и заполнить значения вручную.
+ * Скрипт для создания wp-config.php использует этот файл в процессе установки.
+ * Необязательно использовать веб-интерфейс, можно скопировать файл в "wp-config.php"
+ * и заполнить значения вручную.
  *
  * Этот файл содержит следующие параметры:
  *
@@ -20,13 +20,13 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define( 'DB_NAME', 'ppr' );
+define( 'DB_NAME', 'odd' );
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'ppr' );
+define( 'DB_USER', 'odd' );
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'X0X2UbxKmE4uyAll' );
+define( 'DB_PASSWORD', 'Y38vgfw)DxmlRnhw' );
 
 /** Имя сервера MySQL */
 define( 'DB_HOST', 'localhost' );
@@ -40,20 +40,22 @@ define( 'DB_COLLATE', '' );
 /**#@+
  * Уникальные ключи и соли для аутентификации.
  *
- * Смените значение каждой константы на уникальную фразу.
- * Можно сгенерировать их с помощью {@link https://api.wordpress.org/secret-key/1.1/salt/ сервиса ключей на WordPress.org}
- * Можно изменить их, чтобы сделать существующие файлы cookies недействительными. Пользователям потребуется авторизоваться снова.
+ * Смените значение каждой константы на уникальную фразу. Можно сгенерировать их с помощью
+ * {@link https://api.wordpress.org/secret-key/1.1/salt/ сервиса ключей на WordPress.org}.
+ *
+ * Можно изменить их, чтобы сделать существующие файлы cookies недействительными.
+ * Пользователям потребуется авторизоваться снова.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'M/V3*|Q)5$6d6d0SW9?p!c}c<26#b~qM!O.U#IP]h_B!ahyn*4!^>GnO<+{}W-`E' );
-define( 'SECURE_AUTH_KEY',  'j}iwiiBmYQ|_OF/h|MKtN6x8]zq-$lto^,|Rs*XTrjAiS),Pq8%|-N<oLpeBYcT3' );
-define( 'LOGGED_IN_KEY',    ',`ybN:i1+I+G=s!:dW~v9TZlW#8AV.f^0CxO]lTN5DMjDeC)O(y$p}aAzS?O?Z:5' );
-define( 'NONCE_KEY',        'aHB60bj^1tt(~$|,+,StfN;bn$zCOoHw)@$>xPGA`=&jv :vaXH=0?Vmt##(CTG8' );
-define( 'AUTH_SALT',        'Y9SE=_J/n9TF%#6Q?;^$H;.NE}I,mR&S.T;k@BS7%oCCO]etqb$&>?c(C8g-.Y+k' );
-define( 'SECURE_AUTH_SALT', '2O}4zN@|J[4YvBT-a#7Zb86ZCXOo_~t,gX{d%MJ8xs(3JdaivaLP6Sg,,7F1@<^s' );
-define( 'LOGGED_IN_SALT',   'ssjQdO8?0?r+B^Mx`|[;e5+GTy@qrtn:*<$~3H](BvX1[a*O#cX=Z]]Kv-y|-d$1' );
-define( 'NONCE_SALT',       '5.u4Ds$:.eMMj/ToI:AW+6bB<NgzTmCG3KQJN}`HY4Jy!.?/|Z,zaT.Ifh?+0J(o' );
+define( 'AUTH_KEY',         'M2{upCE-X12c];D(mMy~0eZ+ji?>:,WeKx^vdq*EPv3{n#Dt0]Z,C uQSSQU$Qll' );
+define( 'SECURE_AUTH_KEY',  'OR9{H^k|fQsIuyH[.Jp;#ar#5^WevV_;0CD$j,ImA- APjzq5< _oI+Y[ac);lD/' );
+define( 'LOGGED_IN_KEY',    '.p6Hds_ujH+t 5`;hGGYBe[J4x[D1a],QhvUuz{r&.a1Asc[6}>k+@pjdY!y8<A6' );
+define( 'NONCE_KEY',        'lH1/kUi1qv%X,|lXZI YyuU_I-EyfF<oUs6jxU:rCs-!fl+yhC=&ZAx31TH?E`8T' );
+define( 'AUTH_SALT',        'Q-i**Z!vh<d#gB^L}lIs|K(fm4w3HB}CM.0x#I:7e^4(^fE?>EKuwOue80+B$L!~' );
+define( 'SECURE_AUTH_SALT', '#jzOgGZ~c<e4NK6rb|v0((yX1( D^jZf~W;;vOFewrnBuvZv*lP$fU~xqI}.O:3-' );
+define( 'LOGGED_IN_SALT',   '&_o)6*>lQp<DSvj-_w*IoIYk3$<2yU7g}5/4dG<w-fh#3#L2,zMfa<3!X{w.X[_2' );
+define( 'NONCE_SALT',       'O}bhG#-)@&QS,Tv-;!HI7.dIsnHVwT>xLayw|*kx^AsM*0=U3#6b~>H^9_(65.j<' );
 
 /**#@-*/
 
@@ -63,7 +65,7 @@ define( 'NONCE_SALT',       '5.u4Ds$:.eMMj/ToI:AW+6bB<NgzTmCG3KQJN}`HY4Jy!.?/|Z,
  * Можно установить несколько сайтов в одну базу данных, если использовать
  * разные префиксы. Пожалуйста, указывайте только цифры, буквы и знак подчеркивания.
  */
-$table_prefix = 'wp_';
+$table_prefix = 'odd_';
 
 /**
  * Для разработчиков: Режим отладки WordPress.
@@ -77,6 +79,10 @@ $table_prefix = 'wp_';
  * @link https://ru.wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
+/* Произвольные значения добавляйте между этой строкой и надписью "дальше не редактируем". */
+
+
 
 /* Это всё, дальше не редактируем. Успехов! */
 

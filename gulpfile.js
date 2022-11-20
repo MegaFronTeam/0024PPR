@@ -1,6 +1,6 @@
 'use strict';
-// let publicPath = 'wordpress/wp-content/themes/tisma/public',
-let publicPath = 'public',
+let publicPath = 'wordpress/wp-content/themes/tisma/public',
+// let publicPath = 'public',
     sourse = 'sourse',
     destSprite = '../_sprite.scss'
 
