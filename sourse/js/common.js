@@ -527,6 +527,10 @@ function eventHandler() {
 				for (let showshowAllSlide of showshowAllSlides) {
 					$(showshowAllSlide).slideDown();
 				}
+				let showsExamplesAllSlides = showshowAllWrap.querySelectorAll('.sExamples__slide');
+				for (let showsExamplesAllSlide of showsExamplesAllSlides) {
+					$(showsExamplesAllSlide).slideDown();
+				}
 			});
 		}
 	}

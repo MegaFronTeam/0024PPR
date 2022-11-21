@@ -120,8 +120,6 @@ function sMade_func()
                     $cases = array(2, 0, 1, 1, 1, 2);
                     return $n.' '.$titles[($n % 100 > 4 && $n % 100 < 20) ? 2 : $cases[min($n % 10, 5)]];
                   }
-                ?>
-                <?php
                   function numberMorph2($n) {
                     $titles = ['страница', 'страниц', 'страниц'];
                     $cases = array(2, 0, 1, 1, 1, 2);
@@ -198,6 +196,80 @@ function sMade_func()
 				</div>
 			</section>
 			<!-- end sMade-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sExamples', 'sExamples_func');
+function sExamples_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sExamples-->
+   <section class="sExamples section showAllWrap wow animate__animated animate__fadeIn sExamples sExamples--2" id="sExamples">
+				<div class="sExamples__wrapper">
+					<div class="sExamples__container container">
+            <img class="img img--2" src="<?php echo $get_template_directory_uri;?>/public/img/road-sign-1.png" alt="">
+            <img class="img img--3" src="<?php echo $get_template_directory_uri;?>/public/img/road-sign-2.png" alt="">
+						<div class="section-title">
+							<h2><?php echo the_field('заголовок04'); ?></h2>
+						</div>
+						<div class="slider-examples-wrap">
+							<div class="slider-examples slider-examples--js swiper">
+								<div class="swiper-wrapper">
+                  <?php if (have_rows('блоки04')): while (have_rows('блоки04')) : the_row();?>
+                    <div class="slider-examples__slide swiper-slide">
+                      <div class="sExamples-item">
+                        <div class="sExamples-item__title"><?php echo get_sub_field('заголовок');?>
+                        </div>
+                        <div class="toggle-wrap">
+                          <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+                          <div class="toggle-block">
+                            <p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+                            <ul>
+                              <li>Наши специалисты бесплатно посетят Ваш объект</li>
+                              <li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+                              <li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+                              <li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+                              <li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <p>Пример проекта</p>
+                        <div class="sExamples-item__images-block">
+                          <a href="img/sExamples-bg-1.png" data-fancybox="example-1">
+                            <img class="bg-img" src="img/sExamples-bg-1.png" alt=""/>
+                          </a>
+                          <a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1">
+                            <img src="img/sExamples-fr-1.png" alt=""/>
+                          </a>
+                          <a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1">
+                            <img src="img/sExamples-bk-1.png" alt=""/>
+                          </a>
+                        </div>
+                        <div class="sExamples-item__footer">
+                          <div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+                          </div>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Установка дорожных знаков&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+                        </div>
+                      </div>
+                    </div>
+                  <?php endwhile; else : endif; ?>
+                </div>
+							</div>
+							<div class="control-wrap d-lg-none">
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<a class="sExamples__btn sExamples__btn--blue btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- end sExamples-->
   <?php
   return ob_get_clean();
 }
@@ -291,7 +363,7 @@ function sStandards_func()
                       <use xlink:href="<?php echo $get_template_directory_uri;?>/public/img/svg/sprite.svg#check"></use>
                     </svg>
                   </div>
-                  <p>Проектируем и&nbsp;согласовываем ОДД с&nbsp;2006&nbsp;г.&nbsp;с&nbsp;одним ИНН и&nbsp;номером телефона</p>
+                  <p><?php echo get_sub_field('текст');?></p>
                 </div>
               </div>
             <?php endwhile; else : endif; ?>
@@ -308,6 +380,98 @@ function sStandards_func()
 				</div>
 			</section>
 			<!-- end sStandards-->
+  <?php
+  return ob_get_clean();
+}
+
+/*
+* *****************************************************
+*/
+add_shortcode('sWhatWeDo', 'sWhatWeDo_func');
+function sWhatWeDo_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sWhatWeDo-->
+   <section class="sWhatWeDo section wow animate__animated animate__fadeIn" id="sWhatWeDo">
+				<div class="sWhatWeDo__container container">
+          <img class="img" src="<?php echo $get_template_directory_uri;?>/public/img/parking-sign.png" alt=""/>
+					<div class="section-title text-center">
+						<div class="section-title__headline"><?php echo the_field('надЗаголовок08'); ?>
+						</div>
+						<h2><?php echo the_field('заголовок08'); ?></h2>
+					</div>
+					<div class="sWhatWeDo__slider default-slider default-slider--js swiper">
+						<div class="swiper-wrapper">
+                <?php if (have_rows('блоки08')): while (have_rows('блоки08')) : the_row();?>
+                  <div class="sWhatWeDo__slide swiper-slide bg-wrap">
+                    <div class="sWhatWeDo__img-wrap picture-bg">
+                      <!-- <img src="img/sWhatWeDo-bg-1.jpg" alt=""/> -->
+                      <?php 
+                        $image = get_sub_field('изображение');
+                        // echo '<pre>';print_r($image);echo '</pre>';
+                        $thumb = $image['sizes'][ '270' ];
+                        if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                      <?php endif?>
+                    </div>
+                    <div class="sWhatWeDo__title"><?php echo get_sub_field('заголовок');?>
+                    </div>
+                    <p><?php echo get_sub_field('текст');?></p>
+                    <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+                    </a>
+                  </div>
+                <?php endwhile; else : endif; ?>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sWhatWeDo-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sCoordinate', 'sCoordinate_func');
+function sCoordinate_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sCoordinate-->
+   <section class="sCoordinate section wow animate__animated animate__fadeIn bg-wrap" id="sCoordinate">
+    <img class="picture-bg" src="<?php echo $get_template_directory_uri;?>/public/img/sCoordinate-bg-1.png" alt="" loading="lazy"/>
+    <div class="sCoordinate__container container">
+      <img class="bg" src="<?php echo $get_template_directory_uri;?>/public/img/sCoordinate-bg-2.png" alt=""/>
+      <div class="section-title text-center">
+        <div class="section-title__headline"><?php echo the_field('надЗаголовок09'); ?>
+        </div>
+        <h2><?php echo the_field('заголовок09'); ?></h2>
+      </div>
+      <div class="sCoordinate__slider default-slider default-slider--js swiper">
+        <div class="swiper-wrapper">
+          <?php if (have_rows('блоки09')): while (have_rows('блоки09')) : the_row();?>
+            <div class="sCoordinate__slide swiper-slide bg-wrap">
+              <img src="img/sCoordinate-img-1.png" alt=""/>
+              <?php 
+                $image = get_sub_field('изображение');
+                // echo '<pre>';print_r($image);echo '</pre>';
+                $thumb = $image['sizes'][ '190' ];
+                if( !empty( $image ) ): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+              <?php endif; ?>
+              <p><?php echo get_sub_field('текст');?></p>
+            </div>
+          <?php endwhile; else : endif; ?>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- end sCoordinate-->
   <?php
   return ob_get_clean();
 }
