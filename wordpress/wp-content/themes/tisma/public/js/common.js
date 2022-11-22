@@ -280,6 +280,14 @@ function eventHandler() {
 	}
 	makeDDGroup();
 	//
+
+	const wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+		offset: 150
+	});
+	wow.init();
+
 	let sliders = document.querySelectorAll('.menu-slide-js');
 	// console.log(sliders);
 	for (let slider of sliders){
@@ -480,12 +488,6 @@ function eventHandler() {
 	// 		]);
 	// 	}
 	// });
-	const wow = new WOW({
-		mobile: false,
-		animateClass: 'animate__animated',
-		offset: 150
-	});
-	wow.init();
 
 	$(".toggle-list").click(function(){
 		$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();

@@ -226,19 +226,17 @@ function sExamples_func()
                         <div class="sExamples-item__title"><?php echo get_sub_field('заголовок');?>
                         </div>
                         <div class="toggle-wrap">
-                          <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
+                          <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
                           <div class="toggle-block">
-                            <p class="toggle-list">Преимущества<span class="toggle-list-el active"></span></p>
+                            <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
                             <ul>
-                              <li>Наши специалисты бесплатно посетят Ваш объект</li>
-                              <li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
-                              <li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
-                              <li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
-                              <li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
+                              <?php if (have_rows('список')): while (have_rows('список')) : the_row();?>
+                                <li><?php echo get_sub_field('пунктСписка');?></li>
+                              <?php endwhile; else : endif; ?>
                             </ul>
                           </div>
                         </div>
-                        <p>Пример проекта</p>
+                        <p><?php echo get_sub_field('второйпункт');?></p>
                         <div class="sExamples-item__images-block">
                           <a href="img/sExamples-bg-1.png" data-fancybox="example-1">
                             <img class="bg-img" src="img/sExamples-bg-1.png" alt=""/>
@@ -251,9 +249,9 @@ function sExamples_func()
                           </a>
                         </div>
                         <div class="sExamples-item__footer">
-                          <div class="sExamples-item__price">	Цена <strong>от 10 000 руб.</strong>
+                          <div class="sExamples-item__price">	<?php echo get_sub_field('цена');?></strong>
                           </div>
-                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по &quot;Установка дорожных знаков&quot;" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
                         </div>
                       </div>
                     </div>
@@ -418,7 +416,13 @@ function sWhatWeDo_func()
                     </div>
                     <div class="sWhatWeDo__title"><?php echo get_sub_field('заголовок');?>
                     </div>
-                    <p><?php echo get_sub_field('текст');?></p>
+                    <?php if(get_sub_field('текст')) {
+                      echo '<p>';
+                    }?>
+                      <?php echo get_sub_field('текст');?>
+                    <?php if(get_sub_field('текст')) {
+                      echo '</p>';
+                    }?>
                     <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
                     </a>
                   </div>
@@ -472,6 +476,199 @@ function sCoordinate_func()
     </div>
   </section>
   <!-- end sCoordinate-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sOpen2', 'sOpen2_func');
+function sOpen2_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sOpen-->
+   <section class="sOpen sOpen--2 sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
+				<div class="sOpen__container container">
+					<div class="section-title section-title--2 text-center">
+						<h2><?php echo the_field('заголовок10'); ?></h2>
+					</div>
+					<div class="sOpen__slider-wrap">
+						<div class="swiper sOpen-slider-js">
+							<div class="swiper-wrapper">
+                <?php if (have_rows('блоки10')): while (have_rows('блоки10')) : the_row();?>
+                  <div class="swiper-slide">
+                    <div class="sOpen__card-wrap">
+                      <div class="sOpen__card">
+                        <div class="sOpen__img">
+                          <?php 
+                            $image = get_sub_field('изображение');
+                            $thumb = $image['sizes'][ '380' ];
+                            if( !empty( $image ) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                          <?php endif; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <?php endwhile; else : endif; ?>
+							</div>
+							<div class="d-none d-xl-block">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-arrow-left ">
+										<use xlink:href="<?php echo $get_template_directory_uri;?>/public/img/svg/sprite.svg#arrow-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="<?php echo $get_template_directory_uri;?>/public/img/svg/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sOpen-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sOpen', 'sOpen_func');
+function sOpen_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sOpen-->
+   <section class="sOpen sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
+				<div class="sOpen__container container">
+					<div class="sOpen__bg d-none d-xl-block">
+            <img src="<?php echo $get_template_directory_uri;?>/public/img/sOpen-img.png" alt=""/>
+					</div>
+					<div class="section-title">
+						<p><?php echo the_field('надзаголовок11'); ?></p>
+						<h2><?php echo the_field('заголовок11'); ?></h2>
+            <?php if (have_rows('текста11')): while (have_rows('текста11')) : the_row();?>
+						  <p><?php echo get_sub_field('текст');?></p>
+            <?php endwhile; else : endif; ?>
+					</div>
+					<div class="sOpen__cert-title"><?php echo the_field('подзаголовок11'); ?>
+					</div>
+					<div class="sOpen__slider-wrap">
+						<div class="swiper sOpen-slider-js">
+							<div class="swiper-wrapper">
+                <?php if (have_rows('блоки11')): while (have_rows('блоки11')) : the_row();?>
+                  <div class="swiper-slide">
+                    <div class="sOpen__card-wrap">
+                      <div class="sOpen__card">
+                        <div class="sOpen__img">
+                          <?php 
+                            $image = get_sub_field('изображение');
+                            $thumb = $image['sizes'][ '380' ];
+                            if( !empty( $image ) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                          <?php endif; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <?php endwhile; else : endif; ?>
+							</div>
+							<div class="d-none d-xl-block">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-arrow-left ">
+										<use xlink:href="<?php echo $get_template_directory_uri;?>/public/img/svg/sprite.svg#arrow-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="<?php echo $get_template_directory_uri;?>/public/img/svg/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sOpen-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sOrder', 'sOrder_func');
+function sOrder_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sOrder-->
+   <section class="sOrder section wow animate__animated animate__fadeIn">
+				<div class="sOrder__container container">
+          <img class="img img--1" src="<?php echo $get_template_directory_uri;?>/public/img/sOrder-img-1.jpg" alt=""/>
+          <img class="img img--2" src="<?php echo $get_template_directory_uri;?>/public/img/sOrder-img-2.png" alt=""/>
+					<div class="sOrder__row row">
+						<div class="col-lg-7">
+							<div class="section-title text-center text-lg-start">
+								<h2><?php echo the_field('заголовок12'); ?>
+								</h2>
+							</div>
+							<div class="sOrder__items">
+                <?php if (have_rows('блоки12')): while (have_rows('блоки12')) : the_row();?>
+                  <div class="sOrder__item">
+                    <?php 
+                      $image = get_sub_field('изображение');
+                      // echo '<pre>';print_r($image);echo '</pre>';
+                      $thumb = $image['sizes'][ '190' ];
+                      if( !empty( $image ) ): ?>
+                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                    <?php endif; ?>
+                    <span><?php echo get_sub_field('число');?></span>
+                    <p><?php echo get_sub_field('текст');?></p>
+                  </div>
+                <?php endwhile; else : endif; ?>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__box">
+										<div class="text-center">
+											<div class="form-wrap__title">
+												Перезвоним через
+												<span>5–7 минут</span>
+											</div>
+											<div class="form-wrap__sm-txt">Заполните форму:
+											</div>
+										</div>
+										<div class="form-wrap__inputs">
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Какой ППР вам нужен?"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="На какой телефон перезвонить?"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Как вас зовут?"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<button class="form-wrap__btn" type="submit">Заказать ппр со скидкой 15%
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sOrder-->
   <?php
   return ob_get_clean();
 }

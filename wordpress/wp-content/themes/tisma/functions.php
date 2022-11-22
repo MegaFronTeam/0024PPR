@@ -209,6 +209,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 //new
 //add_image_size( 'mob-vertical', 576,  1000, true );
+add_image_size( '380', 380,  530, false);
 add_image_size( '600', 600,  510, false);
 add_image_size( '270', 270,  240, false);
 add_image_size( '190', 190,  190, false);
