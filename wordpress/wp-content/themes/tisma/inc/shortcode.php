@@ -7,52 +7,82 @@ function headerBlock_func()
   global $get_template_directory_uri, $delay;
   ob_start();
   ?>
-  <section class="headerBlock section" id="headerBlock">
-    <!-- picture-->
-    <picture class="headerBlock__bg">
-      <img src="<?php echo the_field('фон01'); ?>" alt="" loading="lazy"/>
-    </picture>
-    <!-- /picture-->
-    <!-- picture-->
-    <picture class="headerBlock__paper d-none d-lg-block">
-      <img src="<?php echo the_field('документ01'); ?>" alt="" loading="lazy"/>
-    </picture>
-    <!-- /picture-->
-    <div class="container">
-      <div class="section-title">
-        <?php echo the_field('заголовок01'); ?>
-      </div>
-      <div class="headerBlock__row row">
-        <?php if (have_rows('плиточки01')): while (have_rows('плиточки01')) : the_row(); ?>
-          <div class="col-6 col-md-auto <?php echo get_sub_field('cssclasses');?>">
-            <div class="headerBlock__item">
-              <div class="headerBlock__i-row row align-items-center">
-                <div class="col-auto">
-                  <div class="headerBlock__ball">
-                    <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/check-ball.svg" alt=""/>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="headerBlock__gray">
-                    <?php echo get_sub_field('заголовок');?>
-                  </div>
-                  <div class="headerBlock__txt">
-                    <?php echo get_sub_field('значение');?>
+  <!-- start headerBlock-->
+  <section class="headerBlock section wow animate__animated animate__fadeIn" id="headerBlock">
+				<!-- picture-->
+				<picture class="headerBlock__bg">
+          <img src="<?php echo $get_template_directory_uri;?>/public/img/headerBlock-bg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<div class="container">
+					<div class="section-title">
+						<h1><?php echo the_field('заголовок01'); ?></h1>
+					</div>
+					<div class="headerBlock__row row">
+            <?php if (have_rows('блоки01')): while (have_rows('блоки01')) : the_row();?>
+              <div class="col-sm-6 col-md-auto order-first order-md-0">
+                <div class="headerBlock__item">
+                  <div class="headerBlock__i-row row align-items-center">
+                    <div class="col-auto">
+                      <div class="headerBlock__ball">
+                        <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/check-ball.svg" alt=""/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="headerBlock__txt"><?php echo get_sub_field('текст');?></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        <?php endwhile; else : endif; ?>
-      </div>
-      <div class="text-center text-md-start">
-        <a class="headerBlock__btn btn-animate link-modal-js" href="#modal-calc">
-          <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/calc.svg" alt=""/>
-          <span>Рассчитать стоимость ППР</span>
-        </a>
-      </div>
-    </div>
-  </section>
+            <?php endwhile; else : endif; ?>
+					</div>
+					<picture class="headerBlock__paper">
+						<source media="(min-width: 992px)" srcset="<?php echo $get_template_directory_uri;?>/public/img/headerBlock-paper.png"/>
+            <img src="<?php echo $get_template_directory_uri;?>/public/img/headerBlock-bg-1.png" alt=""/>
+					</picture>
+					<div class="headerBlock__btn-row row">
+						<div class="col-lg-auto">
+							<div class="text-center text-md-start">
+								<a class="headerBlock__btn link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><span><?php echo the_field('перваяКнопка01'); ?></span>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-auto d-none d-lg-block">
+							<div class="text-center text-md-start">
+								<a class="headerBlock__btn headerBlock__btn--blue link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><span><?php echo the_field('втораяКнопка01'); ?></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end headerBlock-->
+			<!-- start sForm-->
+			<section class="sForm section">
+				<div class="container">
+					<div class="sForm__box-wrap">
+						<div class="sForm__box">
+							<div class="sForm__row row">
+								<div class="col-lg-auto">
+									<h3><?php echo the_field('заголовокДляФормы01'); ?></h3>
+								</div>
+								<div class="col">
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<button class="form-wrap__btn" type="submit"><?php echo the_field('кнопкаДляФормы01'); ?>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sForm-->
   <?php
   return ob_get_clean();
 }
@@ -119,12 +149,12 @@ function sMade_func()
                     $titles = ['лист', 'листов', 'листов'];
                     $cases = array(2, 0, 1, 1, 1, 2);
                     return $n.' '.$titles[($n % 100 > 4 && $n % 100 < 20) ? 2 : $cases[min($n % 10, 5)]];
-                  }
+                  };
                   function numberMorph2($n) {
                     $titles = ['страница', 'страниц', 'страниц'];
                     $cases = array(2, 0, 1, 1, 1, 2);
                     return $n.' '.$titles[($n % 100 > 4 && $n % 100 < 20) ? 2 : $cases[min($n % 10, 5)]];
-                  }
+                  };
                 ?>
                 <?php if (have_rows('блоки3')): while (have_rows('блоки3')) : the_row();?>
                   <div class="swiper-slide">
@@ -181,7 +211,7 @@ function sMade_func()
                                 </div>
                               </div>
                             </div>
-                            <a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Узнать стоимость такого ппр
+                            <a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?>
                             </a>
                           </div>
                         </div>
@@ -238,20 +268,38 @@ function sExamples_func()
                         </div>
                         <p><?php echo get_sub_field('второйпункт');?></p>
                         <div class="sExamples-item__images-block">
-                          <a href="img/sExamples-bg-1.png" data-fancybox="example-1">
-                            <img class="bg-img" src="img/sExamples-bg-1.png" alt=""/>
+                          <a href="<?php echo get_sub_field('фоновоеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('фоновоеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="bg-img"/>
+                            <?php endif; ?>
                           </a>
-                          <a class="sExamples-item__img sExamples-item__img--front" href="img/sExamples-fr-1.png" data-fancybox="example-1">
-                            <img src="img/sExamples-fr-1.png" alt=""/>
+                          <a class="sExamples-item__img sExamples-item__img--front" href="<?php echo get_sub_field('передниеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('передниеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                            <?php endif; ?>
                           </a>
-                          <a class="sExamples-item__img sExamples-item__img--back" href="img/sExamples-bk-1.png" data-fancybox="example-1">
-                            <img src="img/sExamples-bk-1.png" alt=""/>
+                          <a class="sExamples-item__img sExamples-item__img--back" href="<?php echo get_sub_field('третьеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('третьеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                            <?php endif; ?>
                           </a>
                         </div>
                         <div class="sExamples-item__footer">
                           <div class="sExamples-item__price">	<?php echo get_sub_field('цена');?></strong>
                           </div>
-                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">Узнать стоимость</a>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-3.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?></a>
                         </div>
                       </div>
                     </div>
@@ -262,7 +310,7 @@ function sExamples_func()
 								<div class="swiper-pagination"></div>
 							</div>
 						</div>
-						<a class="sExamples__btn sExamples__btn--blue btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+						<a class="sExamples__btn sExamples__btn--blue btn-green btn-show-more" href="#"><?php echo the_field('кнопка04'); ?>
 						</a>
 					</div>
 				</div>
@@ -329,7 +377,7 @@ function sCases_func()
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
-					<a class="sCases__btn btn-green btn-show-more" href="#">ПОСМОТРЕТЬ ЕЩЕ
+					<a class="sCases__btn btn-green btn-show-more" href="#"><?php echo the_field('кнопка05'); ?>
 					</a>
 				</div>
 			</section>
@@ -366,7 +414,7 @@ function sStandards_func()
               </div>
             <?php endwhile; else : endif; ?>
 						<div class="col-12">
-							<a class="sStandards__btn btn-green link-modal-js" href="#modal-call" data-order="Вызов модалки по кнопке '<?php echo the_field('заголовок06'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать ОДД по  стандартам
+							<a class="sStandards__btn btn-green link-modal-js" href="#modal-call" data-order="Вызов модалки по кнопке '<?php echo the_field('заголовок06'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo the_field('кнопка06'); ?>
 							</a>
 						</div>
 					</div>
@@ -378,6 +426,96 @@ function sStandards_func()
 				</div>
 			</section>
 			<!-- end sStandards-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sExamples2', 'sExamples2_func');
+function sExamples2_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+    <!-- start sExamples-->
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn" id="sExamples">
+				<div class="sExamples__wrapper">
+					<div class="sExamples__container container">
+            <img class="img" src="<?php echo $get_template_directory_uri;?>/public/img/straight-sign.png" alt="">
+						<div class="section-title">
+              <span class="d-none d-sm-block"><?php echo the_field('надЗаголовок07'); ?></span>
+							<h2><?php echo the_field('заголовок07'); ?></h2>
+						</div>
+						<div class="slider-examples-wrap">
+							<div class="slider-examples slider-examples--js swiper">
+								<div class="swiper-wrapper">
+                  <?php if (have_rows('блоки07')): while (have_rows('блоки07')) : the_row();?>
+                    <div class="slider-examples__slide swiper-slide">
+                      <div class="sExamples-item">
+                        <div class="sExamples-item__title"><?php echo get_sub_field('заголовок');?>
+                        </div>
+                        <div class="toggle-wrap">
+                          <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                          <div class="toggle-block">
+                            <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                            <ul>
+                              <?php if (have_rows('список')): while (have_rows('список')) : the_row();?>
+                                <li><?php echo get_sub_field('пунктСписка');?></li>
+                              <?php endwhile; else : endif; ?>
+                            </ul>
+                          </div>
+                        </div>
+                        <p><?php echo get_sub_field('второйпункт');?></p>
+                        <div class="sExamples-item__images-block">
+                          <a href="<?php echo get_sub_field('фоновоеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('фоновоеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="bg-img"/>
+                            <?php endif; ?>
+                          </a>
+                          <a class="sExamples-item__img sExamples-item__img--front" href="<?php echo get_sub_field('передниеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('передниеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                            <?php endif; ?>
+                          </a>
+                          <a class="sExamples-item__img sExamples-item__img--back" href="<?php echo get_sub_field('третьеИзображение')['url'];?>" data-fancybox="example-<?php echo get_row_index(); ?>">
+                            <?php 
+                              $image = get_sub_field('третьеИзображение');
+                              // echo '<pre>';print_r($image);echo '</pre>';
+                              $thumb = $image['sizes'][ '270' ];
+                              if( !empty( $image ) ): ?>
+                              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
+                            <?php endif; ?>
+                          </a>
+                        </div>
+                        <div class="sExamples-item__footer">
+                          <div class="sExamples-item__price">	<?php echo get_sub_field('цена');?></strong>
+                          </div>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-3.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?></a>
+                        </div>
+                      </div>
+                    </div>
+                  <?php endwhile; else : endif; ?>
+                </div>
+							</div>
+							<div class="control-wrap d-lg-none">
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<a class="sExamples__btn btn-green btn-show-more" href="#"><?php echo the_field('кнопка05'); ?>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- end sExamples-->
   <?php
   return ob_get_clean();
 }
@@ -423,7 +561,7 @@ function sWhatWeDo_func()
                     <?php if(get_sub_field('текст')) {
                       echo '</p>';
                     }?>
-                    <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!">Заказать
+                    <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo the_sub_field('кнопка'); ?>
                     </a>
                   </div>
                 <?php endwhile; else : endif; ?>
@@ -641,12 +779,8 @@ function sOrder_func()
 								<form>
 									<div class="form-wrap__box">
 										<div class="text-center">
-											<div class="form-wrap__title">
-												Перезвоним через
-												<span>5–7 минут</span>
-											</div>
-											<div class="form-wrap__sm-txt">Заполните форму:
-											</div>
+											<div class="form-wrap__title"><?php echo the_field('заголовокформы12'); ?></div>
+											<div class="form-wrap__sm-txt"><?php echo the_field('подзаголовокформы12'); ?></div>
 										</div>
 										<div class="form-wrap__inputs">
 											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Какой ППР вам нужен?"/>
@@ -659,7 +793,7 @@ function sOrder_func()
 											</div>
 											<!-- +e.input-wrap-->
 										</div>
-										<button class="form-wrap__btn" type="submit">Заказать ппр со скидкой 15%
+										<button class="form-wrap__btn" type="submit"><?php echo the_field('кнопка12'); ?>
 										</button>
 									</div>
 								</form>
@@ -669,6 +803,61 @@ function sOrder_func()
 				</div>
 			</section>
 			<!-- end sOrder-->
+  <?php
+  return ob_get_clean();
+}
+/*
+* *****************************************************
+*/
+add_shortcode('sContact', 'sContact_func');
+function sContact_func()
+{
+  global $get_template_directory_uri, $delay;
+  ob_start();
+  ?>
+   <!-- start sContact-->
+   <section class="sContact section wow animate__animated animate__fadeIn" id="sContact">
+      <?php 
+        $mail = get_field('email', 'option');
+        $mail_href = 'mailto:'.get_field('email', 'option');
+      
+        $tel = get_field('телефон', 'option');
+        $tel_href = "tel:".str_replace(' ', "", $tel);
+
+        $adress = get_field('адрес', 'option');
+
+        $workTime = get_field('режим_работы', 'option');
+
+        $mapCode = get_field('код_карты', 'option');
+      ?>
+      <div class="sContact__map d-none d-md-block">
+        <?php echo $mapCode?>
+      </div>
+      <div class="sContact__container container">
+        <div class="sContact__box-wrap">
+          <div class="sContact__box">
+            <h2><?php echo the_field('заголовок13'); ?></h2>
+            <div class="sContact__title">Телефон:
+            </div>
+            <a class="sContact__txt sContact__txt--tell" href="<?php echo $tel_href?>"><?php echo $tel?>
+            </a>
+            <div class="sContact__title">Режим работы:
+            </div>
+            <div class="sContact__txt sContact__txt--shedule"><?php echo $workTime?>
+            </div>
+            <div class="sContact__title">Электронная почта:
+            </div>
+            <a class="sContact__txt sContact__txt--mail" href="<?php echo $mail_href?>"><?php echo $mail?>
+            </a>
+            <div class="sContact__title">Адрес офиса:
+            </div>
+            <div class="sContact__txt sContact__txt--address"><?php echo $adress?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end sContact-->
   <?php
   return ob_get_clean();
 }

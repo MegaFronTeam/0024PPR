@@ -26,7 +26,15 @@
 			box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-
+		&--whatsapp {
+			background: linear-gradient(180deg, #00E676 0%, #00A454 100%);
+		}
+		&--telegram {
+			background: linear-gradient(180deg, #35AADA 0%, #1D91C2 100%);
+		}
+		&--vk {
+			background: linear-gradient(180deg, #4D76A1 0%, #0E4C8D 100%);
+		}
 	}
 	.icon{
 		font-size: 16px;

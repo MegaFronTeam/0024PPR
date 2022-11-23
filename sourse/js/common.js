@@ -491,6 +491,7 @@ function eventHandler() {
 
 	$(".toggle-list").click(function(){
 		$(this).parents('.toggle-wrap').find(".toggle-block").fadeToggle();
+		$(this).parents('.toggle-wrap').find(".toggle-list-el").toggleClass('active');
 	});
 	let sExampleSliders = $('.slider-examples--js');
 	if (sExampleSliders) {
@@ -529,7 +530,7 @@ function eventHandler() {
 				for (let showshowAllSlide of showshowAllSlides) {
 					$(showshowAllSlide).slideDown();
 				}
-				let showsExamplesAllSlides = showshowAllWrap.querySelectorAll('.sExamples__slide');
+				let showsExamplesAllSlides = showshowAllWrap.querySelectorAll('.slider-examples__slide');
 				for (let showsExamplesAllSlide of showsExamplesAllSlides) {
 					$(showsExamplesAllSlide).slideDown();
 				}
