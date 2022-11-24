@@ -101,7 +101,7 @@
             </div>
           </div>
           <div class="col-auto d-none d-md-block">
-            <a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
+            <a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
             </a>
           </div>
           <div class="col-auto d-lg-none ms-auto">
@@ -182,7 +182,7 @@
             </div>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/@2x/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
+            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
             </a>
           </div>
         </div>

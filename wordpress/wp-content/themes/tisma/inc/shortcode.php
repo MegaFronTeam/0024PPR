@@ -597,7 +597,6 @@ function sCoordinate_func()
         <div class="swiper-wrapper">
           <?php if (have_rows('блоки09')): while (have_rows('блоки09')) : the_row();?>
             <div class="sCoordinate__slide swiper-slide bg-wrap">
-              <img src="<?php echo $get_template_directory_uri;?>/public/img/sCoordinate-img-1.png" alt=""/>
               <?php 
                 $image = get_sub_field('изображение');
                 // echo '<pre>';print_r($image);echo '</pre>';
