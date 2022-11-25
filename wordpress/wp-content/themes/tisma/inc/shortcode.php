@@ -43,13 +43,13 @@ function headerBlock_func()
 					<div class="headerBlock__btn-row row">
 						<div class="col-lg-auto">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-1.png" data-title="Мы перезвоним!"><span><?php echo the_field('перваяКнопка01'); ?></span>
+								<a class="headerBlock__btn link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'Бесплатная консультация'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><span><?php echo the_field('перваяКнопка01'); ?></span>
 								</a>
 							</div>
 						</div>
 						<div class="col-lg-auto d-none d-lg-block">
 							<div class="text-center text-md-start">
-								<a class="headerBlock__btn headerBlock__btn--blue link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-1.png" data-title="Мы перезвоним!"><span><?php echo the_field('втораяКнопка01'); ?></span>
+								<a class="headerBlock__btn headerBlock__btn--blue link-modal-js" href="#modal-call" data-order="Вызов модалки в headerblock, кнопка 'СОГЛАСОВАНИЕ ГОТОВОГО ПРОЕКТА'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><span><?php echo the_field('втораяКнопка01'); ?></span>
 								</a>
 							</div>
 						</div>
@@ -68,13 +68,7 @@ function headerBlock_func()
 								</div>
 								<div class="col">
 									<div class="form-wrap">
-										<form>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<button class="form-wrap__btn" type="submit"><?php echo the_field('кнопкаДляФормы01'); ?>
-											</button>
-										</form>
+                    <?php echo do_shortcode('[contact-form-7 id="280" title="Форма на главном экране"]'); ?>
 									</div>
 								</div>
 							</div>
@@ -211,7 +205,7 @@ function sMade_func()
                                 </div>
                               </div>
                             </div>
-                            <a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?>
+                            <a class="sMade__btn link-modal-js" href="#modal-call" data-order="Вызов модалки на слайде '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><?php echo get_sub_field('кнопка');?>
                             </a>
                           </div>
                         </div>
@@ -256,13 +250,15 @@ function sExamples_func()
                         <div class="sExamples-item__title"><?php echo get_sub_field('заголовок');?>
                         </div>
                         <div class="toggle-wrap">
-                          <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                          <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
                           <div class="toggle-block">
-                            <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                            <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
                             <ul>
-                              <?php if (have_rows('список')): while (have_rows('список')) : the_row();?>
-                                <li><?php echo get_sub_field('пунктСписка');?></li>
-                              <?php endwhile; else : endif; ?>
+                              <li>Наши специалисты бесплатно посетят Ваш объект</li>
+                              <li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+                              <li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+                              <li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+                              <li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
                             </ul>
                           </div>
                         </div>
@@ -299,7 +295,7 @@ function sExamples_func()
                         <div class="sExamples-item__footer">
                           <div class="sExamples-item__price">	<?php echo get_sub_field('цена');?></strong>
                           </div>
-                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?></a>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" ddata-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><?php echo get_sub_field('кнопка');?></a>
                         </div>
                       </div>
                     </div>
@@ -414,7 +410,7 @@ function sStandards_func()
               </div>
             <?php endwhile; else : endif; ?>
 						<div class="col-12">
-							<a class="sStandards__btn btn-green link-modal-js" href="#modal-call" data-order="Вызов модалки по кнопке '<?php echo the_field('заголовок06'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo the_field('кнопка06'); ?>
+							<a class="sStandards__btn btn-green link-modal-js" href="#modal-call" data-order="Вызов модалки по кнопке '<?php echo the_field('заголовок06'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><?php echo the_field('кнопка06'); ?>
 							</a>
 						</div>
 					</div>
@@ -439,7 +435,7 @@ function sExamples2_func()
   ob_start();
   ?>
     <!-- start sExamples-->
-			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn" id="sExamples">
+			<section class="sExamples section showAllWrap wow animate__animated animate__fadeIn" id="sExamples2">
 				<div class="sExamples__wrapper">
 					<div class="sExamples__container container">
             <img class="img" src="<?php echo $get_template_directory_uri;?>/public/img/straight-sign.png" alt="">
@@ -456,13 +452,15 @@ function sExamples2_func()
                         <div class="sExamples-item__title"><?php echo get_sub_field('заголовок');?>
                         </div>
                         <div class="toggle-wrap">
-                          <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                          <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
                           <div class="toggle-block">
-                            <p class="toggle-list"><?php echo get_sub_field('первыйПункт');?></p>
+                            <p class="toggle-list">Преимущества<span class="toggle-list-el"></span></p>
                             <ul>
-                              <?php if (have_rows('список')): while (have_rows('список')) : the_row();?>
-                                <li><?php echo get_sub_field('пунктСписка');?></li>
-                              <?php endwhile; else : endif; ?>
+                              <li>Наши специалисты бесплатно посетят Ваш объект</li>
+                              <li>Быстро и&nbsp;с&nbsp;гарантией согласуем ПОДД</li>
+                              <li>Скидка&nbsp;10% при заказе в&nbsp;день обращения</li>
+                              <li>Предоставляем гарантию на&nbsp;проект ОДД на&nbsp;весь период строительства и&nbsp;эксплуатации</li>
+                              <li>Проектируем ОДД на&nbsp;любой вид строительных работ</li>
                             </ul>
                           </div>
                         </div>
@@ -499,7 +497,7 @@ function sExamples2_func()
                         <div class="sExamples-item__footer">
                           <div class="sExamples-item__price">	<?php echo get_sub_field('цена');?></strong>
                           </div>
-                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!"><?php echo get_sub_field('кнопка');?></a>
+                          <a class="link-modal-js btn-green" href="#modal-call" data-order="Вызов модалки по '<?php echo get_sub_field('заголовок');?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php get_field('заголовок', 'option')?>"><?php echo get_sub_field('кнопка');?></a>
                         </div>
                       </div>
                     </div>
@@ -561,7 +559,7 @@ function sWhatWeDo_func()
                     <?php if(get_sub_field('текст')) {
                       echo '</p>';
                     }?>
-                    <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-1.png" data-title="Мы перезвоним!"><?php echo the_sub_field('кнопка'); ?>
+                    <a class="sWhatWeDo__btn btn btn-outline-light link-modal-js" href="#modal-call" data-order="Вызов модалки по '<?php echo the_field('заголовок08'); ?>'" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>"><?php echo the_sub_field('кнопка'); ?>
                     </a>
                   </div>
                 <?php endwhile; else : endif; ?>
@@ -682,7 +680,7 @@ function sOpen_func()
   ob_start();
   ?>
    <!-- start sOpen-->
-   <section class="sOpen sOpen--js section wow animate__animated animate__fadeIn" id="sOpen">
+   <section class="sOpen sOpen--js section wow animate__animated animate__fadeIn" id="sOpen2">
 				<div class="sOpen__container container">
 					<div class="sOpen__bg d-none d-xl-block">
             <img src="<?php echo $get_template_directory_uri;?>/public/img/sOpen-img.png" alt=""/>
@@ -781,19 +779,7 @@ function sOrder_func()
 											<div class="form-wrap__title"><?php echo the_field('заголовокформы12'); ?></div>
 											<div class="form-wrap__sm-txt"><?php echo the_field('подзаголовокформы12'); ?></div>
 										</div>
-										<div class="form-wrap__inputs">
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Какой ППР вам нужен?"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="На какой телефон перезвонить?"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Как вас зовут?"/>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-										<button class="form-wrap__btn" type="submit"><?php echo the_field('кнопка12'); ?>
-										</button>
+                    <?php echo do_shortcode('[contact-form-7 id="281" title="форма в низу страницы"]'); ?>
 									</div>
 								</form>
 							</div>

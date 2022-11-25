@@ -71,22 +71,11 @@
             <div class="form-wrap__inputs">
               <input class="title-js" type="hidden" value="" name="title"/>
               <input class="price-js" type="hidden" value="" name="price"/>
-              <div class="form-wrap__input-wrap form-wrap__input-wrap--type">
-                <select class="form-wrap__input form-wrap__input--type form-select" name="type">
-                  <option value="" selected="selected" hidden="hidden">Выберите вид ППР</option>
-                  <option>вид ППР 1</option>
-                  <option>вид ППР 2</option>
-                  <option>вид ППР 3</option>
-                </select>
-              </div>
-              <div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
-              </div>
-              <button class="form-wrap__btn form-wrap__btn--calc" type="submit"> <img loading="lazy" src="img/svg/calc.svg" alt=""/>Рассчитать стоимость
-              </button>
+              <?php echo do_shortcode('[contact-form-7 id="286" title="Форма в модальном окне Рассчитать стоимость"]'); ?>
             </div>
             <div class="form-wrap__policy">
               Нажимая на кнопку вы соглашаетесь с
-              <a href="#">политикой конфиденциальности</a>
+              <a href="<?php echo $policy ?>">политикой конфиденциальности</a>
             </div>
           </form>
         </div>
@@ -112,17 +101,11 @@
         <div class="form-wrap">
           <form>
             <div class="form-wrap__inputs">
-              <div class="form-wrap__input-wrap form-wrap__input-wrap--user"><input class="form-wrap__input form-wrap__input--name form-control" type="text" placeholder="Ваше имя" name="name"/>
-              </div>
-              <div class="form-wrap__input-wrap form-wrap__input-wrap--tel"><input class="form-wrap__input form-wrap__input--tel form-control" type="tel" placeholder="номер телефона" name="tel"/>
-                <!--/img(loading="lazy" src="img/svg/modal-tel.svg" alt="")-->
-              </div>
-              <button class="form-wrap__btn form-wrap__btn--leave" type="submit"><span>оставить заявку</span><span>и получить скидку 15% на первый проект ОДД</span>
-              </button>
+              <?php echo do_shortcode('[contact-form-7 id="282" title="Форма в модальном окне Мы перезвоним"]'); ?>
             </div>
             <div class="form-wrap__policy">
               Нажимая на кнопку вы соглашаетесь с
-              <a href="#">политикой конфиденциальности</a>
+              <a href="<?php echo $policy?>">политикой конфиденциальности</a>
             </div>
           </form>
         </div>
@@ -150,7 +133,7 @@
   </div>
   <!-- end modals-->
 <?php wp_footer(); ?>
-
+<?php echo get_field('коды_в_низу_страницы', 'option')?>
 <!-- jivosite -->
 <!-- <script src="//code.jivosite.com/widget/p2PpkrwbPR" async></script> -->
 <!-- /jivosite -->

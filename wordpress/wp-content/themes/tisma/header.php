@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <?php echo get_field('коды_в_верху_страницы', 'option')?>
   <?php wp_head(); ?>
 
 </head>
@@ -101,19 +102,18 @@
             </div>
           </div>
           <div class="col-auto d-none d-md-block">
-            <a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
+            <a class="top-nav__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>">перезвоните мне
             </a>
           </div>
           <div class="col-auto d-lg-none ms-auto">
             <div class="row gx-1">
-              <div class="col-auto">
-                <a class="top-nav__wa-btn" href="#"><img loading="lazy" src="img/svg/wa-icon.svg" alt=""/>
-                </a>
-              </div>
-              <div class="col-auto">
-                <a class="top-nav__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
-                </a>
-              </div>
+              <?php if (have_rows('социальные_сети_в_шапке', 'option')): while (have_rows('социальные_сети_в_шапке', 'option')) : the_row();?>
+                <div class="col-auto">
+                  <a class="top-nav__<?php echo get_sub_field('название');?>-btn" href="<?php echo get_sub_field('ссылка');?>">
+                    <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/<?php echo get_sub_field('название');?>-icon.svg" alt=""/>
+                  </a>
+                </div>
+              <?php endwhile; else : endif; ?>
             </div>
           </div>
         </div>
@@ -126,13 +126,13 @@
         <div class="menu">
           <div class="swiper menu-slide-js">
             <ul class="swiper-wrapper">
-              <li class="swiper-slide"><a href="#">Гарантии</a></li>
-              <li class="swiper-slide"><a href="#">Услуги по ОДД</a></li>
-              <li class="swiper-slide"><a href="#">Согласования</a></li>
-              <li class="swiper-slide"><a href="#">Отзывы о нас</a></li>
-              <li class="swiper-slide"><a href="#">Наши объекты</a></li>
-              <li class="swiper-slide"><a href="#">О компании</a></li>
-              <li class="swiper-slide"><a href="#">Контакты</a></li>
+              <li class="swiper-slide"><a href="#sOrganize">Гарантии</a></li>
+              <li class="swiper-slide"><a href="#sExamples2">Услуги по ОДД</a></li>
+              <li class="swiper-slide"><a href="#sCases">Согласования</a></li>
+              <li class="swiper-slide"><a href="#sOpen">Отзывы о нас</a></li>
+              <li class="swiper-slide"><a href="#sWhatWeDo">Наши объекты</a></li>
+              <li class="swiper-slide"><a href="#sOpen2">О компании</a></li>
+              <li class="swiper-slide"><a href="#sContact">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -150,13 +150,13 @@
             <div class="menu">
               <div class="swiper menu-slide-js">
                 <ul class="swiper-wrapper">
-                  <li class="swiper-slide"><a href="#">Гарантии</a></li>
-                  <li class="swiper-slide"><a href="#">Услуги по ОДД</a></li>
-                  <li class="swiper-slide"><a href="#">Согласования</a></li>
-                  <li class="swiper-slide"><a href="#">Отзывы о нас</a></li>
-                  <li class="swiper-slide"><a href="#">Наши объекты</a></li>
-                  <li class="swiper-slide"><a href="#">О компании</a></li>
-                  <li class="swiper-slide"><a href="#">Контакты</a></li>
+                  <li class="swiper-slide"><a href="#sOrganize">Гарантии</a></li>
+                  <li class="swiper-slide"><a href="#sExamples2">Услуги по ОДД</a></li>
+                  <li class="swiper-slide"><a href="#sCases">Согласования</a></li>
+                  <li class="swiper-slide"><a href="#sOpen">Отзывы о нас</a></li>
+                  <li class="swiper-slide"><a href="#sWhatWeDo">Наши объекты</a></li>
+                  <li class="swiper-slide"><a href="#sOpen2">О компании</a></li>
+                  <li class="swiper-slide"><a href="#sContact">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -171,18 +171,17 @@
           </div>
           <div class="col-auto d-lg-none">
             <div class="row gx-1">
-              <div class="col-auto">
-                <a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/wa-icon.svg" alt=""/>
-                </a>
-              </div>
-              <div class="col-auto">
-                <a class="fixed-line__wa-btn" href="#"><img loading="lazy" src="img/svg/tg-icon.svg" alt=""/>
-                </a>
-              </div>
+              <?php if (have_rows('социальные_сети_в_шапке', 'option')): while (have_rows('социальные_сети_в_шапке', 'option')) : the_row();?>
+                <div class="col-auto">
+                  <a class="fixed-line__<?php echo get_sub_field('название');?>-btn" href="<?php echo get_sub_field('ссылка');?>">
+                  <img loading="lazy" src="<?php echo $get_template_directory_uri;?>/public/img/svg/<?php echo get_sub_field('название');?>-icon.svg" alt=""/>
+                  </a>
+                </div>
+              <?php endwhile; else : endif; ?>
             </div>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/modal-paper-3.png" data-title="Мы перезвоним!">перезвоните мне
+            <a class="fixed-line__callback-btn link-modal-js" href="#modal-call" data-order="Вызов модалки в фиксированной шапке" data-pic="<?php echo $get_template_directory_uri;?>/public/img/<?php echo get_field('ссылка_на_изображение', 'option')?>" data-title="<?php echo get_field('заголовок', 'option')?>">перезвоните мне
             </a>
           </div>
         </div>

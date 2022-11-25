@@ -262,7 +262,9 @@
 			margin-bottom: 2px;
 			font-size: rem(14);
 			line-height: calc(17/14);
+			margin-top: rem(20);
 			@include media-breakpoint-up(sm){
+				margin-top: rem(30);
 				margin-bottom: 3px;
 				font-size: rem(16);
 				line-height: calc(19/16);
