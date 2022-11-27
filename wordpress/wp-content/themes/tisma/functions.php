@@ -223,3 +223,31 @@ function add_additional_class_on_li($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+
+// remove_action('wpcf7_init', 'wpcf7_add_form_tag_submit');
+// add_action('wpcf7_init', 'twentysixteen_child_cf7_button');
+// if (!function_exists('twentysixteen_child_cf7_button')) {
+//   function twentysixteen_child_cf7_button() {
+//     wpcf7_add_form_tag('submit', 'twentysixteen_child_cf7_button_handler');
+//   }
+// }
+// if (!function_exists('twentysixteen_child_cf7_button_handler')) {
+//   function twentysixteen_child_cf7_button_handler($tag) {
+//     $tag = new WPCF7_FormTag($tag);
+//     $class = wpcf7_form_controls_class($tag->type);
+//     $atts = array();
+//     $atts['class'] = $tag->get_class_option($class);
+//     $atts['class'] .= ' twentysixteen-child-custom-btn';
+//     $atts['id'] = $tag->get_id_option();
+//     $atts['tabindex'] = $tag->get_option('tabindex', 'int', true);
+//     $value = isset($tag->values[0]) ? $tag->values[0] : '';
+//     if (empty($value)) {
+//       $value = esc_html__('Contact Us', 'twentysixteen');
+//     }
+//     $atts['type'] = 'submit';
+//     $atts = wpcf7_format_atts($atts);
+//     $html = sprintf('<button>send</button>', $atts, $value);
+//     return $html;
+//   }
+// }
