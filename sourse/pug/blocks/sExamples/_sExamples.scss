@@ -45,7 +45,7 @@
 		}
 		h2 {
 			color: $white !important;
-			font-size: 18px;
+			font-size: 22px;
 			@include media-breakpoint-up(sm) {
 				font-size: rem(22);
 			}
@@ -126,7 +126,11 @@
 		}
 	}
 	&--2 {
+		--sPT: #{rem(25)};
 		--sPB: #{rem(50)};
+		@include media-breakpoint-up(md) {
+			--sPT: 0;
+		}
 		.section-title {
 			h2 {
 				font-weight: 400;
@@ -135,7 +139,7 @@
 				color: #000 !important;
 				h2 {
 					color: $white !important;
-					font-size: 18px;
+					font-size: 24px;
 					@include media-breakpoint-up(sm) {
 						font-size: rem(22);
 					}
@@ -222,8 +226,8 @@
 			font-size: rem(21px);
 		}
 		font-size: rem(20px);
-		font-weight: 600;
-		color: #5DACDA;
+		font-weight: 400;
+		color: $body-color;
 		// line-height: calc(29 / 24);
 		span {
 			// font-size: 24px;
@@ -345,6 +349,8 @@
 			position: absolute;
 			left: 0;
 			top: 0;
+			border: 2px solid #86b92d;
+			border-radius: 6px;
 		}
 	}
 	&__img--front {
@@ -393,6 +399,8 @@
 		width: 70%;
 		top: 0;
 		right: rem(-20);
+		border: 1px solid #86b92d;
+		border-radius: 6px;
 	}
 	&__result {
 		position: relative;
@@ -488,11 +496,11 @@
 	
 		height: auto;
 		margin-bottom: 20px;
-		&:nth-child(n+7) {
-			@include media-breakpoint-up(md) {
-				display: none;
-			}
-		}
+		// &:nth-child(n+7) {
+		// 	@include media-breakpoint-up(md) {
+		// 		display: none;
+		// 	}
+		// }
 	}
 }
 

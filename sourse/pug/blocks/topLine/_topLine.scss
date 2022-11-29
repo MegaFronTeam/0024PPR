@@ -105,15 +105,15 @@
 	&__logo{
 		display: block;
 
-		width: rem(131);
+		width: rem(114);
 		white-space: nowrap;
 		span{
 		white-space: nowrap;
 
 		}
-		@media (max-width: 450px) {
-			width: 100%;
-		}
+		// @media (max-width: 450px) {
+		// 	width: 100%;
+		// }
 		@media (min-width: 375px) {
 			margin-left: 4px;
 			margin-right: 12px;
@@ -134,7 +134,7 @@
 				margin-right: rem(7);
 			}
 			@media (max-width: 450px) {
-				width: 14px;
+				width: 26px;
 			}
 		}
 		span{
@@ -143,9 +143,9 @@
 			@include media-breakpoint-up(sm){
 				font-size: rem(15);
 			}
-			@media (max-width: 450px) {
-				font-size: 11px;
-			}
+			// @media (max-width: 450px) {
+			// 	font-size: 11px;
+			// }
 			line-height: 1;
 			text-transform: uppercase;
 			color: $green2;
